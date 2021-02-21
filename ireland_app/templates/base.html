@@ -11,8 +11,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{% static 'assets/img/visatoirelandlogo.jpg' %}" rel="icon">
+  <link href="{% static 'assets/img/visatoirelandlogo.jpg' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -42,39 +42,55 @@
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
   <div class="container d-flex align-items-center justify-content-between">
+    <a href="{% url 'index' %}" class="logo"><img src="{% static 'assets/img/visatoirelandlogo.jpg' %}" alt="" class="img-fluid"></a>
+    <a href="#"> <img src="{% static 'assets/img/Animated-Flag-Ireland.gif' %}" style="height:40px"> </a>
+    <!-- <div class="nav-inspiring"> -->
+      <p class="body">"Through Hard Times Prosperity"<br></p>
+    <!-- </div> -->
 
-    <div class="logo">
-      <h1><a href="{% url 'index' %}">VisaToIreland</a></h1>
+
+    <!-- <div class="logo">
+      <h1><a href="{% url 'index' %}">VisaToIreland</a></h1> -->
+        <!-- <a href="#"> <img src="{% static 'assets/img/australian-flag-animated-gif-36.gif' %}" style="height:40px"> </a> -->
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
     </div>
 
+
+
+
+
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a class="nav-link scrollto active" href="{% url 'index' %}">Home</a></li>
-        <li><a class="nav-link scrollto" href="#">About</a></li>
-        <li><a class="nav-link scrollto" href="#">Services</a></li>
-        <li><a class="nav-link scrollto " href="#">Portfolio</a></li>
-        <li><a class="nav-link scrollto" href="#">Pricing</a></li>
-        <li><a class="nav-link scrollto" href="#">Team</a></li>
-        <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+        <li><a class="nav-link scrollto active" href="#">Breaking News</a></li>
+
+        <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="#">Drop Down 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a href="#">Deep Drop Down 1</a></li>
-                <li><a href="#">Deep Drop Down 2</a></li>
-                <li><a href="#">Deep Drop Down 3</a></li>
-                <li><a href="#">Deep Drop Down 4</a></li>
-                <li><a href="#">Deep Drop Down 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Drop Down 2</a></li>
-            <li><a href="#">Drop Down 3</a></li>
-            <li><a href="#">Drop Down 4</a></li>
+            <li><a href="#">Short Stay Visas</a></li>
+            <li><a href="#">Student visa</a></li>
+            <li><a href="#">Long Stay Visas</a></li>
+            <!-- <li><a href="#">Drop Down 4</a></li> -->
           </ul>
         </li>
-        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+
+        <li class="dropdown"><a href="#"><span>Migration Services</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+              <li>  <a href="#">Italy</a> </li>
+              <li>  <a href="#">Spain</a> </li>
+              <li>  <a href="https://visatomalta.com/">Malta</a> </li>
+              <li>  <a href="https://visatoportugal.pro/">Portugal</a> </li>
+              <li>  <a href="#">Greece</a> </li>
+              <li>  <a href="#">Cyprus</a> </li>
+              <li>  <a href="https://visatonewzealand.com/">New Zealand</a> </li>
+              <li>  <a href="https://visatocanada.pro/">Canada</a> </li>
+              <li>  <a href="#">Germany</a> </li>
+              <li>  <a href="https://www.visatoaustralia.pro/">Australia</a> </li>
+              <li>  <a href="#">Denmark</a> </li>
+
+            </ul>
+        </li>
+          <li><a class="nav-link scrollto" href="#">About Us</a></li>
+        <li><a class="nav-link scrollto" href="{% url 'contactus' %}">Contact Us</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->

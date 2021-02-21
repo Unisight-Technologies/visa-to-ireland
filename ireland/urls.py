@@ -19,4 +19,5 @@ from ireland_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Homepage.as_view(),name="index"),
+    path('contactus/', views.Contactpage.as_view(),name="contactus"),
 ]

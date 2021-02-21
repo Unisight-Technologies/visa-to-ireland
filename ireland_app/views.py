@@ -5,3 +5,6 @@ from django.views.generic import View, TemplateView
 
 class Homepage(TemplateView):
     template_name= "index.html"
+
+class Contactpage(TemplateView):
+    template_name= "contactus.html"    
