@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Homepage.as_view(),name="index"),
     path('shortvisa/', views.Shortvisapage.as_view(),name="shortvisa"),
+    path('studentvisa/', views.Studentvisapage.as_view(),name="studentvisa"),
     path('contactus/', views.Contactpage.as_view(),name="contactus"),
 ]
