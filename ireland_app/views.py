@@ -12,5 +12,8 @@ class Shortvisapage(TemplateView):
 class Studentvisapage(TemplateView):
     template_name= "studentvisa.html"
 
+class Aboutuspage(TemplateView):
+    template_name= "aboutus.html"
+
 class Contactpage(TemplateView):
     template_name= "contactus.html"

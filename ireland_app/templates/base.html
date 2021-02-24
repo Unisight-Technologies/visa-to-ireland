@@ -40,7 +40,7 @@
 
 
 <!-- ======= Header ======= -->
-<header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+<header id="header" class="fixed-top d-flex align-items-center  header ">
   <div class="container d-flex align-items-center justify-content-between">
     <a href="{% url 'index' %}" class="logo"><img src="{% static 'assets/img/visatoirelandlogo.jpg' %}" alt="" class="img-fluid"></a>
     <a href="#"> <img src="{% static 'assets/img/Animated-Flag-Ireland.gif' %}" style="height:40px;margin-right:100px;"> </a>
@@ -66,8 +66,8 @@
 
         <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="#">Short Stay Visas</a></li>
-            <li><a href="#">Student visa</a></li>
+            <li><a href="{% url 'shortvisa' %}">Short Stay Visas</a></li>
+            <li><a href="{% url 'studentvisa' %}">Student visa</a></li>
             <li><a href="#">Long Stay Visas</a></li>
             <!-- <li><a href="#">Drop Down 4</a></li> -->
           </ul>
@@ -89,7 +89,7 @@
 
             </ul>
         </li>
-          <li><a class="nav-link scrollto" href="#">About Us</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'aboutus' %}">About Us</a></li>
         <li><a class="nav-link scrollto" href="{% url 'contactus' %}">Contact Us</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
@@ -105,17 +105,15 @@
 <!-- ======= Footer ======= -->
 <footer id="footer">
   <div class="container">
-    <h3>Selecao</h3>
-    <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+    <h3>Visa To Ireland</h3>
+    <p>footer </p>
     <div class="social-links">
-      <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
       <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
       <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-      <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
       <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
     </div>
     <div class="copyright">
-      &copy; Copyright <strong><span>Selecao</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>VisaToIreland</span></strong>. All Rights Reserved
     </div>
 
   </div>
