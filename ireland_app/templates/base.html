@@ -30,12 +30,8 @@
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Selecao - v4.0.0
-  * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
+
 </head>
 
 
@@ -44,9 +40,9 @@
   <div class="container d-flex align-items-center justify-content-between">
     <a href="{% url 'index' %}" class="logo"><img src="{% static 'assets/img/visatoirelandlogo.jpg' %}" alt="" class="img-fluid"></a>
     <a href="#"> <img src="{% static 'assets/img/Animated-Flag-Ireland.gif' %}" style="height:40px;margin-right:100px;"> </a>
-    <!-- <div class="nav-inspiring"> -->
-      <p class="body" style="color:white; text-align:left;">"Through Hard Times Prosperity"<br></p>
-    <!-- </div> -->
+
+        <i  style="color:black; text-align:left;">"Through Hard Times Prosperity"<br></i>
+
 
 
     <!-- <div class="logo">
@@ -62,7 +58,7 @@
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a class="nav-link scrollto active" href="#">Breaking News</a></li>
+        <li><a class="nav-link scrollto active" style="color:#fff; color.hover:#000;" href="#">Breaking News</a></li>
 
         <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
@@ -103,7 +99,7 @@
 {% endblock %}
 
 <!-- ======= Footer ======= -->
-<footer id="footer">
+<!-- <footer id="footer">
   <div class="container">
     <h3>Visa To Ireland</h3>
     <p>footer </p>
@@ -117,7 +113,87 @@
     </div>
 
   </div>
-</footer><!-- End Footer -->
+</footer> -->
+
+<!-- End Footer -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-info">
+            <img class="footer-logo" style="width: 200px" src="/static/assets/img/visatoirelandlogo.jpg" alt="">
+            <p>
+              Address line 1 <br>
+              Address line 2<br><br>
+              <strong>Phone:</strong> phone no<br>
+              <strong>Email:</strong> info@visatoireland.com<br>
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href=" https://www.instagram.com/visa.toireland/" class="instagram"><i class="bx bxl-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}">Home</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'aboutus' %}">About Us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'studentvisa' %}">Student visa </a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'shortvisa' %}">Short stay visa</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Long stay visa</a></li>
+            <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Self employment visa</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#"> Investing visa</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Entrepreneur visa</a></li> -->
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contactus' %}">Contact Us</a></li>             <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li> -->             <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
+           </ul>
+         </div>
+
+         <div class="col-lg-2 col-md-6 footer-links">
+           <h4>Migration Services</h4>
+           <ul>
+             <li> <i class="bx bx-chevron-right"></i> <a href="#">Italy</a> </li>
+             <li> <i class="bx bx-chevron-right"></i> <a href="#">Spain</a> </li>
+             <li> <i class="bx bx-chevron-right"></i> <a href="https://visatomalta.com/">Malta</a> </li>
+             <li> <i class="bx bx-chevron-right"></i> <a href="https://visatoportugal.pro/">Portugal</a> </li>
+             <li> <i class="bx bx-chevron-right"></i> <a href="#">Greece</a> </li>
+             <li> <i class="bx bx-chevron-right"></i> <a href="https://visatocyprus.com/">Cyprus</a> </li>
+             <li> <i class="bx bx-chevron-right"></i> <a href="https://visatonewzealand.com/">NewZealand</a> </li>
+             <li> <i class="bx bx-chevron-right"></i> <a href="https://visatocanada.pro/">Canada</a> </li>
+             <li> <i class="bx bx-chevron-right"></i> <a href="#">Germany</a> </li>
+             <li> <i class="bx bx-chevron-right"></i> <a href="https://www.visatoaustralia.pro/">Australia</a> </li>
+             <li> <i class="bx bx-chevron-right"></i> <a href="#">Denmark</a> </li>
+
+           </ul>
+           </div>
+
+         <div class="col-lg-4 col-md-6 footer-newsletter">
+           <h4>Our Newsletter</h4>
+            <form action="" method="post">
+             <input type="email" name="email"><input type="submit" value="Subscribe">
+           </form>
+
+         </div>
+
+       </div>
+     </div>
+   </div>
+
+   <div class="container">
+     <div class="copyright">
+       &copy; Copyright <strong><span>Visa To Ireland</span></strong>. All Rights Reserved
+       &copysr; Powered by <strong> <span><a style="color: white;" href="https://www.instagram.com/unisighttechnologies/?hl=en">Unisight Technologies</a> and Digitalcue media</span></strong>
+     </div>
+
+  </div>
+ </footer><!-- End Footer -->
+
+
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -131,6 +207,7 @@
 
 <!-- Template Main JS File -->
 <script src="{% static 'assets/js/main.js' %}"></script>
+
 
 </body>
 
