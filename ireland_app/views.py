@@ -9,11 +9,16 @@ class Homepage(TemplateView):
 class Shortvisapage(TemplateView):
     template_name= "shortvisa.html"
 
+class Longvisapage(TemplateView):
+    template_name= "longvisa.html"
+
 class Studentvisapage(TemplateView):
     template_name= "studentvisa.html"
 
 class Aboutuspage(TemplateView):
     template_name= "aboutus.html"
 
+class Whyuspage(TemplateView):
+    template_name= "whyus.html"
 class Contactpage(TemplateView):
     template_name= "contactus.html"

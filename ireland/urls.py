@@ -20,7 +20,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Homepage.as_view(),name="index"),
     path('shortvisa/', views.Shortvisapage.as_view(),name="shortvisa"),
+    path('longvisa/', views.Longvisapage.as_view(),name="longvisa"),
     path('studentvisa/', views.Studentvisapage.as_view(),name="studentvisa"),
     path('aboutus/', views.Aboutuspage.as_view(),name="aboutus"),
+    path('whyus/', views.Whyuspage.as_view(),name="whyus"),
     path('contactus/', views.Contactpage.as_view(),name="contactus"),
 ]
