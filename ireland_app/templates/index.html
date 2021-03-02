@@ -2,12 +2,44 @@
 {% load static %}
 {% block body_block %}
 
+<div>
+  <div id="video-carousel-example2" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#video-carousel-example2" data-slide-to="0" class="active"></li>
+  <!--     <li data-target="#video-carousel-example2" data-slide-to="1"></li> -->
+  <!--     <li data-target="#video-carousel-example2" data-slide-to="2"></li> -->
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+      <!-- First slide -->
+      <div class="carousel-item active">
+        <!--Mask color-->
+        <div class="view">
+          <!--Video source-->
+          <video class="video-fluid" autoplay loop muted style="width:100%; height:75%;">
+            <source src="{% static 'assets/img/ireland.mp4' %}" type="video/mp4" />
+          </video>
+          <div class="mask rgba-indigo-light"></div>
+        </div>
 
+        <!--Caption-->
+        <div class="carousel-caption">
+          <div class="animated fadeInDown">
+            <h1 style="font-weight:600;  margin-top: -450px; font-family: Oswald; font-size:50px;">Welcome To Ireland</h1>
+          </div>
+        </div>
+        <!--Caption-->
+      </div>
+</div>
 
 
 
 
   <main id="main">
+
+
 
     <!-- ======= F.A.Q Section ======= -->
     <section id="faq" class="faq">
