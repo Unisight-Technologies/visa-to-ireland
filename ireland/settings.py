@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
@@ -25,9 +24,9 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'bmh*0yr=3lb&#j&6cxvz49862$j2-g&sv+t5kxv1qi*(nzvq48'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['visatoireland.com','www.visatoireland.com']
 
 
 # Application definition
@@ -122,3 +121,4 @@ USE_TZ = True
 import os.path
 STATIC_URL = '/static/'
 STATIC_FILES_DIRS = (os.path.join('static'),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
