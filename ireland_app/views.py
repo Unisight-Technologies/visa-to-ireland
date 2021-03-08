@@ -3,6 +3,9 @@ from django.views.generic import View, TemplateView
 from django.contrib.auth.decorators import login_required
 from . import scrap_news
 from django.http import HttpResponse
+from . import mailHandler
+from django.contrib import messages
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 

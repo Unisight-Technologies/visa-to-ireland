@@ -1,0 +1,2476 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+
+<!-- <section id="hero" class="d-flex align-items-center">
+  <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+    <h1>Welcome to Canada</h1>
+    <h2>We are team of talanted designers making websites with Bootstrap</h2>
+    <a href="#about" class="btn-get-started scrollto">Get Started</a>
+  </div>
+</section> --><!-- End Hero -->
+
+<style media="screen">
+#English1 ,#Skilled1 ,#Educational1, #Specialist1, #Australian1, #Professional1 ,#Credentialled1,#Study1,#Partner1{
+  display: none;
+}
+
+#English2 ,#Skilled2 ,#Educational2, #Specialist2, #Australian2, #Professional2 ,#Credentialled2,#Study2 ,#Partner2, #Nomination2 {
+  display: none;
+}
+
+#English3 ,#Skilled3 ,#Educational3, #Specialist3, #Australian3, #Professional3 ,#Credentialled3, #Study3 ,#Partner3, #Nomination3 {
+  display: none;
+}
+#English4 ,#Skilled4 ,#Educational4, #Specialist4, #Australian4, #Professional4 ,#Credentialled4, #Study4 ,#Partner4, #Nomination4 {
+  display: none;
+}
+
+
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+}
+</style>
+
+
+
+<!-- ------------------MODALS START---------------------- -->
+<!-- Modal Nominated visa (subclass 189)-->
+
+<div class="modal fade" id="result_modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Compute your score!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form name="score-form1">
+
+
+          <div class="form-group">
+
+            <b><label for="">Enter your age: </label></b><br>
+            <select class="modal-dropdown" name="age1">
+              <option value="25">
+                18-24 years
+              </option>
+              <option value="30">
+                25-32 years
+              </option>
+              <option value="25">
+                33-39 years
+              </option>
+              <option value="15">
+                40-44 years
+              </option>
+            </select><br>
+
+            <!-- <span class="popuptext show" id="myPopup">
+              We only need your email to send you payment receipt.<br><br>
+              We won't be storing your email in our database.
+            </span> -->
+            <b><label for="">Select your English language ability:</label></b>
+            <select class="modal-dropdown" name="english1">
+              <option value="0">
+                Competent English
+              </option>
+              <option value="10">
+              Proficiet English
+              </option>
+              <option value="20">
+              Superior English
+              </option>
+
+            </select>
+
+            <b><label for="">Skilled emloyment experience(in/out australia):</label></b>
+            <select class="modal-dropdown" name="skilled1">
+              <option value="0">
+              Less than 3 years (outside Australia)
+              </option>
+              <option value="5">
+              At least 3 but less than 5 years (outside Australia)
+              </option>
+              <option value="10">
+              At least 5 but less than 8 years (outside Australia)
+              </option>
+              <option value="15">
+              At least 8 years (outside Australia)
+              </option>
+
+              <option value="0">
+              Less than 1 year (in Australia)
+              </option>
+              <option value="5">
+              At least 1 but less than 3 years (in Australia)
+              </option>
+              <option value="10">
+              At least 3 but less than 5 years (in Australia)
+              </option>
+              <option value="15">
+              At least 5 but less than 8 years (in Australia)
+              </option>
+              <option value="20">
+              At least 8 years (in Australia)
+              </option>
+
+            </select>
+
+
+          <b><label for="">Select your Educational Qualifications:</label></b><br>
+          <select class="modal-dropdown" name="educational1">
+            <option value="20">A Doctorate from an Australian educational institution or a Doctorate from another educational institution, that is of a recognised standard</option>
+            <option value="15">At least a Bachelor degree from an Australian educational institution or at least a Bachelor qualification, from another educational institution, that is of a recognised standard.</option>
+            <option value="10">A diploma or trade qualification from an Australian educational institution.</option>
+            <option value="10">Attained a qualification or award recognised by the relevant assessing authority for your nominated skilled occupation as being suitable for that occupation.</option>
+
+          </select><br><br>
+
+          <b><label for="">Specialist education qualification:</label></b><br>
+          <select class="modal-dropdown" name="specialist1">
+            <option value="10">A Masters degree by research or a Doctorate degree from an Australian educational institution that included at least 2 academic years study  in a relevant field.</option>
+          </select><br><br>
+
+          <b><label for="">Australian study requirement:</label></b><br>
+          <select class="modal-dropdown" name="australian1">
+            <option value="5">Meet the Australian study requirement.</option>
+          </select><br><br>
+
+          <b><label for="">Professional Year in Australia:</label></b><br>
+          <select class="modal-dropdown" name="professional1">
+            <option value="5">Completion of a Professional Year in Australia.</option>
+          </select><br><br>
+
+          <b><label for="">Credentialled community language:</label></b><br>
+          <select class="modal-dropdown" name="credentialled1">
+            <option value="5">Hold a recognised qualification in a credentialled community language.</option>
+          </select><br><br>
+
+          <b><label for="">Study in regional Australia:</label></b><br>
+          <select class="modal-dropdown" name="study1">
+            <option value="15">You must have at least 1 degree, diploma or trade qualification from an Australian educational institution that satisfies the Australian study requirement obtained while living and studying in an eligible area of regional Australia </option>
+            </select><br><br>
+
+          <b><label for="">Partner skills:</label></b><br>
+          <select class="modal-dropdown" name="partner1">
+            <option value="10">Your spouse or de facto partner must also be an applicant for this visa and meet age, English and skill criteria and much more.</option>
+            <option value="5">Your spouse or de facto partner must also be an applicant for this visa and has competent English and much more.</option>
+            <option value="10">You are single or your partner is an Australian citizen or permanent resident.</option>
+
+          </select><br><br>
+
+        <button type="button" onclick="calculateScore_1()" class="modal-btn">Calculate Now</button>
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Regional 190 -->
+
+<div class="modal fade" id="result_modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Compute your score!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form name="score-form2">
+
+
+
+          <div class="form-group">
+
+            <b><label for="">Enter your age: </label></b><br>
+            <select class="modal-dropdown" name="age2">
+              <option value="25">
+                18-24 years
+              </option>
+              <option value="30">
+                25-32 years
+              </option>
+              <option value="25">
+                33-39 years
+              </option>
+              <option value="15">
+                40-44 years
+              </option>
+            </select><br><br>
+
+            <!-- <span class="popuptext show" id="myPopup">
+              We only need your email to send you payment receipt.<br><br>
+              We won't be storing your email in our database.
+            </span> -->
+            <b><label for="">Select your English language ability:</label></b>
+            <select class="modal-dropdown" name="english2">
+              <option value="0">
+                Competent English
+              </option>
+              <option value="10">
+              Proficiet English
+              </option>
+              <option value="20">
+              Superior English
+              </option>
+
+            </select><br><br>
+            <b><label for="">Skilled emloyment experience(in/out australia):</label></b>
+            <select class="modal-dropdown" name="skilled2">
+              <option value="0">
+              Less than 3 years (outside Australia)
+              </option>
+              <option value="5">
+              At least 3 but less than 5 years (outside Australia)
+              </option>
+              <option value="10">
+              At least 5 but less than 8 years (outside Australia)
+              </option>
+              <option value="15">
+              At least 8 years (outside Australia)
+              </option>
+
+              <option value="0">
+              Less than 1 year (in Australia)
+              </option>
+              <option value="5">
+              At least 1 but less than 3 years (in Australia)
+              </option>
+              <option value="10">
+              At least 3 but less than 5 years (in Australia)
+              </option>
+              <option value="15">
+              At least 5 but less than 8 years (in Australia)
+              </option>
+              <option value="20">
+              At least 8 years (in Australia)
+              </option>
+
+            </select><br><br>
+
+
+            <b><label for="">Select your Educational Qualifications:</label></b><br>
+          <select class="modal-dropdown" name="educational2">
+            <option value="20">A Doctorate from an Australian educational institution or a Doctorate from another educational institution, that is of a recognised standard</option>
+            <option value="15">At least a Bachelor degree from an Australian educational institution or at least a Bachelor qualification, from another educational institution, that is of a recognised standard.</option>
+            <option value="10">A diploma or trade qualification from an Australian educational institution.</option>
+            <option value="10">Attained a qualification or award recognised by the relevant assessing authority for your nominated skilled occupation as being suitable for that occupation.</option>
+
+          </select><br><br>
+
+          <b><label for="">Specialist education qualification:</label></b><br>
+          <select class="modal-dropdown" name="specialist2">
+            <option value="10">A Masters degree by research or a Doctorate degree from an Australian educational institution that included at least 2 academic years study  in a relevant field.</option>
+          </select><br><br>
+
+          <b><label for="">Australian study requirement:</label></b><br>
+          <select class="modal-dropdown" name="australian2">
+            <option value="5">Meet the Australian study requirement.</option>
+          </select><br><br>
+
+          <b><label for="">Professional Year in Australia:</label></b><br>
+          <select class="modal-dropdown" name="professional2">
+            <option value="5">Completion of a Professional Year in Australia.</option>
+          </select><br><br>
+
+          <b><label for="">Credentialled community language:</label></b><br>
+          <select class="modal-dropdown" name="credentialled2">
+            <option value="5">Hold a recognised qualification in a credentialled community language.</option>
+          </select><br><br>
+
+          <b><label for="">Study in regional Australia:</label></b><br>
+          <select class="modal-dropdown" name="study2">
+            <option value="15">You must have at least 1 degree, diploma or trade qualification from an Australian educational institution that satisfies the Australian study requirement obtained while living and studying in an eligible area of regional Australia </option>
+          </select><br><br>
+
+          <b><label for="">Partner skills:</label></b><br>
+          <select class="modal-dropdown" name="partner2">
+            <option value="10">Your spouse or de facto partner must also be an applicant for this visa and meet age, English and skill criteria and much more.</option>
+            <option value="5">Your spouse or de facto partner must also be an applicant for this visa and has competent English and much more.</option>
+            <option value="10">You are single or your partner is an Australian citizen or permanent resident.</option>
+
+          </select><br><br>
+
+          <b><label for="">Nominations</label></b><br>
+          <select class="modal-dropdown" name="nomination2">
+            <option value="10">The nominating State or Territory government agency has determined that your proposed business is of unique and important benefit to the State or Territory where the nominating government agency is located</option>
+          </select><br><br>
+
+        <button type="button" onclick="calculateScore_2()" class="modal-btn">Calculate Now</button>
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Modal Regional 489 -->
+
+<div class="modal fade" id="result_modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Compute your score!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form name="score-form3">
+
+
+          <div class="form-group">
+
+            <b><label for="">Enter your age: </label></b><br>
+            <select class="modal-dropdown" name="age3">
+              <option value="25">
+                18-24 years
+              </option>
+              <option value="30">
+                25-32 years
+              </option>
+              <option value="25">
+                33-39 years
+              </option>
+              <option value="15">
+                40-44 years
+              </option>
+            </select><br><br>
+
+            <!-- <span class="popuptext show" id="myPopup">
+              We only need your email to send you payment receipt.<br><br>
+              We won't be storing your email in our database.
+            </span> -->
+            <b><label for="">Select your English language ability:</label></b>
+            <select class="modal-dropdown" name="english3">
+              <option value="0">
+                Competent English
+              </option>
+              <option value="10">
+              Proficiet English
+              </option>
+              <option value="20">
+              Superior English
+              </option>
+            </select><br><br>
+
+            <b><label for="">Skilled emloyment experience(in/out australia):</label></b>
+            <select class="modal-dropdown" name="skilled3">
+              <option value="0">
+              Less than 3 years (outside Australia)
+              </option>
+              <option value="5">
+              At least 3 but less than 5 years (outside Australia)
+              </option>
+              <option value="10">
+              At least 5 but less than 8 years (outside Australia)
+              </option>
+              <option value="15">
+              At least 8 years (outside Australia)
+              </option>
+
+              <option value="0">
+              Less than 1 year (in Australia)
+              </option>
+              <option value="5">
+              At least 1 but less than 3 years (in Australia)
+              </option>
+              <option value="10">
+              At least 3 but less than 5 years (in Australia)
+              </option>
+              <option value="15">
+              At least 5 but less than 8 years (in Australia)
+              </option>
+              <option value="20">
+              At least 8 years (in Australia)
+              </option>
+            </select><br><br>
+
+
+          <b><label for="">Select your Educational Qualifications:</label></b><br>
+          <select class="modal-dropdown" name="educational3">
+            <option value="20">A Doctorate from an Australian educational institution or a Doctorate from another educational institution, that is of a recognised standard</option>
+            <option value="15">At least a Bachelor degree from an Australian educational institution or at least a Bachelor qualification, from another educational institution, that is of a recognised standard.</option>
+            <option value="10">A diploma or trade qualification from an Australian educational institution.</option>
+            <option value="10">Attained a qualification or award recognised by the relevant assessing authority for your nominated skilled occupation as being suitable for that occupation.</option>
+
+          </select><br><br>
+
+          <b><label for="">Specialist education qualification:</label></b><br>
+          <select class="modal-dropdown" name="specialist3">
+            <option value="10">A Masters degree by research or a Doctorate degree from an Australian educational institution that included at least 2 academic years study  in a relevant field.</option>
+          </select><br><br>
+
+          <b><label for="">Australian study requirement:</label></b><br>
+          <select class="modal-dropdown" name="australian3">
+            <option value="5">Meet the Australian study requirement.</option>
+          </select><br><br>
+
+          <b><label for="">Professional Year in Australia:</label></b><br>
+          <select class="modal-dropdown" name="professional3">
+            <option value="5">Completion of a Professional Year in Australia.</option>
+          </select><br><br>
+
+          <b><label for="">Credentialled community language:</label></b><br>
+          <select class="modal-dropdown" name="credentialled3">
+            <option value="5">Hold a recognised qualification in a credentialled community language.</option>
+          </select><br><br>
+
+          <b><label for="">Study in regional Australia:</label></b><br>
+          <select class="modal-dropdown" name="study3">
+            <option value="15">You must have at least 1 degree, diploma or trade qualification from an Australian educational institution that satisfies the Australian study requirement obtained while living and studying in an eligible area of regional Australia </option>
+          </select><br><br>
+
+          <b><label for="">Partner skills:</label></b><br>
+          <select class="modal-dropdown" name="partner3">
+            <option value="10">Your spouse or de facto partner must also be an applicant for this visa and meet age, English and skill criteria and much more.</option>
+            <option value="5">Your spouse or de facto partner must also be an applicant for this visa and has competent English and much more.</option>
+            <option value="10">You are single or your partner is an Australian citizen or permanent resident.</option>
+          </select><br><br>
+
+          <b><label for="">Nominations</label></b><br>
+          <select class="modal-dropdown" name="nomination3">
+            <option value="10">The nominating State or Territory government agency has determined that your proposed business is of unique and important benefit to the State or Territory where the nominating government agency is located</option>
+          </select><br><br>
+
+        <button type="button" onclick="calculateScore_3()" class="modal-btn">Calculate Now</button>
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Regional 491 -->
+
+<div class="modal fade" id="result_modal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Compute your score!</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form name="score-form4">
+
+
+      <div class="form-group">
+
+        <b><label for="">Enter your age: </label></b><br>
+        <select class="modal-dropdown" name="age4">
+          <option value="25">
+            18-24 years
+          </option>
+          <option value="30">
+            25-32 years
+          </option>
+          <option value="25">
+            33-39 years
+          </option>
+          <option value="15">
+            40-44 years
+          </option>
+        </select><br><br>
+
+        <!-- <span class="popuptext show" id="myPopup">
+          We only need your email to send you payment receipt.<br><br>
+          We won't be storing your email in our database.
+        </span> -->
+        <b><label for="">Select your English language ability:</label></b>
+        <select class="modal-dropdown" name="english4">
+          <option value="0">
+            Competent English
+          </option>
+          <option value="10">
+          Proficiet English
+          </option>
+          <option value="20">
+          Superior English
+          </option>
+        </select><br><br>
+
+        <b><label for="">Skilled emloyment experience(in/out australia):</label></b>
+        <select class="modal-dropdown" name="skilled4">
+          <option value="0">
+          Less than 3 years (outside Australia)
+          </option>
+          <option value="5">
+          At least 3 but less than 5 years (outside Australia)
+          </option>
+          <option value="10">
+          At least 5 but less than 8 years (outside Australia)
+          </option>
+          <option value="15">
+          At least 8 years (outside Australia)
+          </option>
+
+          <option value="0">
+          Less than 1 year (in Australia)
+          </option>
+          <option value="5">
+          At least 1 but less than 3 years (in Australia)
+          </option>
+          <option value="10">
+          At least 3 but less than 5 years (in Australia)
+          </option>
+          <option value="15">
+          At least 5 but less than 8 years (in Australia)
+          </option>
+          <option value="20">
+          At least 8 years (in Australia)
+          </option>
+
+        </select><br><br>
+
+
+      <b><label for="">Select your Educational Qualifications:</label></b><br>
+      <select class="modal-dropdown" name="educational4">
+        <option value="20">A Doctorate from an Australian educational institution or a Doctorate from another educational institution, that is of a recognised standard</option>
+        <option value="15">At least a Bachelor degree from an Australian educational institution or at least a Bachelor qualification, from another educational institution, that is of a recognised standard.</option>
+        <option value="10">A diploma or trade qualification from an Australian educational institution.</option>
+        <option value="10">Attained a qualification or award recognised by the relevant assessing authority for your nominated skilled occupation as being suitable for that occupation.</option>
+
+      </select><br><br>
+
+      <b><label for="">Specialist education qualification:</label></b><br>
+      <select class="modal-dropdown" name="specialist4">
+        <option value="10">A Masters degree by research or a Doctorate degree from an Australian educational institution that included at least 2 academic years study  in a relevant field.</option>
+      </select><br><br>
+
+      <b><label for="">Australian study requirement:</label></b><br>
+      <select class="modal-dropdown" name="australian4">
+        <option value="5">Meet the Australian study requirement.</option>
+      </select><br><br>
+
+      <b><label for="">Business Innovation stream only:</label></b><br>
+      <select class="modal-dropdown" name="professional4">
+        <option value="5">Completion of a Professional Year in Australia.</option>
+      </select><br><br>
+
+      <b><label for="">Credentialled community language:</label></b><br>
+      <select class="modal-dropdown" name="credentialled4">
+        <option value="5">Hold a recognised qualification in a credentialled community language.</option>
+      </select><br><br>
+
+      <b><label for="">Study in regional Australia:</label></b><br>
+      <select class="modal-dropdown" name="study4">
+        <option value="15">You must have at least 1 degree, diploma or trade qualification from an Australian educational institution that satisfies the Australian study requirement obtained while living and studying in an eligible area of regional Australia </option>
+      </select><br><br>
+
+      <b><label for="">Partner skills:</label></b><br>
+      <select class="modal-dropdown" name="partner4">
+        <option value="10">Your spouse or de facto partner must also be an applicant for this visa and meet age, English and skill criteria and much more.</option>
+        <option value="5">Your spouse or de facto partner must also be an applicant for this visa and has competent English and much more.</option>
+        <option value="10">You are single or your partner is an Australian citizen or permanent resident.</option>
+      </select><br><br>
+
+      <b><label for="">Nominations</label></b><br>
+      <select class="modal-dropdown" name="nomination4">
+        <option value="10">The nominating State or Territory government agency has determined that your proposed business is of unique and important benefit to the State or Territory where the nominating government agency is located</option>
+      </select><br><br>
+
+    <button type="button" onclick="calculateScore_4()" class="modal-btn">Calculate Now</button>
+
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<main id="main">
+
+
+  <section id="one" class="wrapper style1">
+
+    <section id="specials" class="specials">
+      <div class="section-title">
+            <span style="color: #000">WORK VISA</span><br><br>
+            <img style="width: 35%" src="/static/assets/img/workvisa.jpeg" alt="">
+
+
+          </div>
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <!-- <p style="color: black; font-size: 3em; font-family:Open Sans, sans-serif;"></p> -->
+          <br><br>
+
+          <div class="section-title-details">
+            <p>CHANGE YOUR LIFE WITH AN AUSTRALIAN WORK VISA</p>
+
+            As one of the world’s most dynamic countries, Australia has an immense requirements for skilled talent. Make the most of this opportunity by applying for an Australian Work Visa. With our years of experience with Australian Visa processes, Y-Axis is the perfect partner to help you launch your career in Australia.          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-toggle="tab" href="#tab-1">WHY WORK IN AUSTRALIA ?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-2">TYPES OF WORK VISAS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-3">AUSTRALIA WORK PERMIT VISA PROCESS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-4">VISA FEE</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row">
+                  <div class="col-lg-10 details order-2 order-lg-1">
+                    <h3>WHY WORK IN AUSTRALIA </h3>
+                    <ul>
+                      <li class="font-italic"> <i class="icofont-check-circled"></i> Stable economy growing at <b>2.5%</b> every year on average </li>
+                      <li class="font-italic"> <i class="icofont-check-circled"></i> <b>Job opportunities</b> in multiple sectors </li>
+                      <li class="font-italic"> <i class="icofont-check-circled"></i> High minimum wage & great savings opportunity </li>
+                      <li class="font-italic"> <i class="icofont-check-circled"></i> <b>Exceptional social benefits</b> like free healthcare </li>
+                      <li class="font-italic"> <i class="icofont-check-circled"></i> Beautiful cities with vibrant <b>multicultural life</b> </li>
+                    </ul>
+                    <p>When you work in Australia, you will enjoy basic rights and the same workplace protection rule as other local employees. All of this makes Australia an attractive destination to make a career.</p>
+                  </div>
+                  <!-- <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="assets/img/sunsweet.jpeg" alt="" class="img-fluid">
+                </div> -->
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-2">
+              <div class="row">
+                <div class="col-lg-10 details order-2 order-lg-1">
+                  <h3>TYPES OF WORK VISAS</h3>
+                  <p>The Australian government devised the <b>General Skilled Migration program (Skillselect)</b> in 2013 to replace the Australia skilled worker visas.</p>
+                  <p>The Skillselect is designed to assess the skills of applicants under a point-based system so that immigrants with the right skills can be selected. <br></p>
+                  <b>The applicants are given points under the following criteria:</b><br><br>
+                  <ul style="list-style:disc">
+                    <li><h5>Age:</h5>Those between the ages of <b>25 and 32</b> score the most points while those above 45 do not gain any points.<br><br></li>
+                    <li><h5>English language proficiency:</h5>Applicants are required to take the <b>IELTS test</b>. If they score 8 bands or more, you get 20 points.<br><br></li>
+                    <li><h5>Skilled employment:</h5>If you have experience in an occupation that is listed in the <b>Skilled Occupations</b> List you will get points based on the years of experience. 20 is the maximum points you can gain.<br><br></li>
+                    <li><h5>Educational qualification:</h5>To get points under this category, your qualification must be related to your <b>nominated occupation</b>. 20 points is the maximum you can score if you have a doctorate while a bachelor’s or master’s degree will give you 15 points.<br><br></li>
+                    <li><h5>Australian qualifications:</h5>You can get five points if you have an <b>Australian qualification</b> from an Australian educational institute.<br><br></li>
+                    <li><h5>Regional study:</h5>You can gain an additional 5 points if you have <b>lived and studied in regional Australia</b>.<br><br></li>
+                    <li><h5>Community language skills:</h5>You will gain another 5 points if you have <b>translator/ interpreter level skills in one of the country’s communities languages</b>.<br><br></li>
+                    <li><h5>Spouse/partner skills and qualifications:</h5>If you have included your spouse/partner in the application and he/she is not an Australian resident/citizen, then their skills are eligible to be counted towards your total points. You will gain an additional five points if your <b>spouse/partner must meet the basic requirements of the Australian General Skilled Migration</b><br><br></li>
+                    <li><h5>Professional year:</h5>You can gain another 5 points if you have completed a <b> Professional Year in Australia in the last five years</b>.<br><br></li>
+                    <li><h5>Skilled Independent Visa:</h5>You can be eligible for this visa if you have the necessary skills and qualifications for specific occupations that are listed in the <b>Skilled Occupation List (SOL)</b>. This visa does not require the sponsorship of an employer. You can use the SkillSelect tool to find out if your skills are in demand.<br><br></li>
+                    <li><h5>Employer Nomination Scheme:</h5>Under this scheme, a permanent work visa is given to <b>workers sponsored by their companies</b>.<br><br></li>
+                    <li><h5>TSS Visa (Temporary Skill Shortage): </h5>Under this visa, individuals can work between <b>two to four years</b> depending on the employee’s requirement. Applicants should have a minimum of two years’ work experience and should be below 45 years. Companies taking employees on this visa must pay them the market salary.<br><br></li>
+                </ul>
+
+<!--
+                  <ul>
+                    <li class="font-italic"><i class="icofont-check-circled"></i>	Job-offer </li>
+                    <li class="font-italic"><i class="icofont-check-circled"></i>	Language Proficiency, CLB 5.</li>
+                    <li class="font-italic"><i class="icofont-check-circled"></i> 	Education, 1- year Canadian post-secondary education or foreign equivalent.</li>
+                    <li class="font-italic"><i class="icofont-check-circled"></i>	Work experience in NOC codes 4411 or 4412.</li>
+                  </ul> -->
+                  <!-- <section id="more">
+                    <a href=" https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/caregivers/child-care-home-support-worker/some-experience-eligibility.html" class="btn-get-started scrollto">More Info</a>
+                  </section>
+                  <p></p> -->
+                </div>
+                <!-- <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="assets/img/suntop.jpeg" alt="" class="img-fluid">
+              </div> -->
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-3">
+            <div class="row">
+              <div class="col-lg-11 details order-2 order-lg-1">
+                <h3>AUSTRALIA WORK PERMIT VISA PROCESS</h3>
+                <p>Steps to apply for a work visa:</p>
+                <ol class="font-italic" type="1">
+                  <li>Determine the <b>category of work visa</b> you are eligible for</li>
+                  <li>Ensure that you satisfy the requirements of the <b>points-based assessment (Skillselect)</b></li>
+                  <li>Make sure your employer completes an <b>online nomination/sponsorship form</b> <b>before</b> you can apply for the visa</li>
+                  <li>Fill the <b>online application form</b> of the visa category</li>
+                  <li>Submit the relevant information and supplementary documents along with your application.</li>
+                  <li>Pay your <b>application fee</b> for processing your visa</li>
+                  <li>Y-Axis has extensive experience with helping individuals secure an Australian Work Visa. The key documents necessary to apply for this visa include:<br><b>Evidence of English proficiency (IELTS/TOEFL)</b></li>
+                  <li>Provide <b>educational and employment</b> documentation</li>
+                  <li><b>Health insurance</b></li>
+
+                </ol>
+                <p>Typically, the work visa takes <b>2-5 months</b> to be processed. A Y-Axis Work Visa Expert will help you with the visa application processing and work with you to create a thorough and comprehensive visa application to increase your chances of success. Once your visa is processed you can travel to Australia for work.</p>
+                </div>
+              <!-- <div class="col-lg-4 text-center order-1 order-lg-2">
+              <img src="assets/img/Priyaoils.jpeg" alt="" class="img-fluid">
+            </div> -->
+          </div>
+        </div>
+
+        <div class="tab-pane" id="tab-4">
+          <div class="row">
+            <div class="col-lg-10 details order-2 order-lg-1">
+              <h3>VISA FEES</h3>
+              <p>The visa fees change from time to time. The cost of your visa is dependent on the <b>date we receive your application</b>. If there is a price increase between the date you lodge your application and the date the immigration department receives your application, you will need to pay the <b>new application charge</b>. You must ensure that you have the available funds to cover the surcharges.</p>
+              <p>Visa application charges are usually in <b>Australian dollars (AUD)</b> which must be paid with the visa application. However, in some cases, there are no visa application charges.</p>
+                        </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="row">
+       <div class="col-lg-3 col-md-6 d-flex align-items-stretch" onclick="showContent('intro')" data-aos="fade-up">
+         <div class="icon-box">
+           <br>
+           <img class="resize" src="https://jtimmigration.com/wp-content/uploads/skilled-trades-immigrate-to-Canada.jpg" alt="">
+           <br><br><h4><br>Skilled Independent visa (subclass 189)</h4>
+           <section id="score" >
+             <br>
+             <div class="btn-get-started scrollto">
+               CALCULATE YOUR SCORE
+             </div>
+               <!-- <a class="btn-get-started scrollto"onclick="showContent('intro')">CALCULATE YOUR CSR SCORES</a> -->
+           </section>
+         </div>
+       </div>
+
+       <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" onclick="showContent('eligibility')" data-aos="fade-up" data-aos-delay="150">
+         <div class="icon-box">
+           <br>
+            <img class="resize" src="https://jtimmigration.com/wp-content/uploads/skilled-trades-immigrate-to-Canada.jpg" alt="">
+           <br><br><h4><br>Skilled Nominated visa (subclass 190)</h4>
+           <section id="score" >
+             <br> <br>
+             <div class="btn-get-started scrollto">
+               CALCULATE YOUR SCORE
+             </div>
+           </section>
+         </div>
+       </div>
+
+       <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" onclick="showContent('process')" data-aos="fade-up" data-aos-delay="150">
+         <div class="icon-box">
+           <br>
+            <img class="resize" src="https://jtimmigration.com/wp-content/uploads/skilled-trades-immigrate-to-Canada.jpg" alt="">
+           <br><br><h4><br>Skilled Regional (Provisional) visa (subclass 489)</h4>
+           <section id="score" >
+             <br>
+             <div class="btn-get-started scrollto">
+               CALCULATE YOUR SCORE
+             </div>
+           </section>
+         </div>
+       </div>
+
+       <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" onclick="showContent('last')" data-aos="fade-up" data-aos-delay="300">
+         <div class="icon-box">
+          <br>
+           <img class="resize" src="https://jtimmigration.com/wp-content/uploads/skilled-trades-immigrate-to-Canada.jpg" alt="">
+         <br><br><h4><br>Skilled Work Regional (Provisional) visa (subclass 491)</h4>
+         <section id="score" >
+           <div class="btn-get-started scrollto">
+             CALCULATE YOUR SCORE
+           </div>
+         </section>
+         </div>
+       </div>
+     </div>
+    </div>
+    </section>
+
+  <!-- End Specials Section -->
+
+
+
+  <section style="background: white;">
+
+    <div id="intro">
+        <div class="container" data-aos="zoom-in">
+          <section style="background: white;">
+            <div class="container">
+              <h1>Skilled Independent visa (subclass 189) <br> Factors for Immigration</h1>
+              <!-- <p>The minimum score required to be eligible for permanent residence in the Express Entry System
+                under the Federal skill Workers Program is <b>67 points</b> out of <b>100 points</b>.
+           <br><br>The six selection factors and the maximum points for each factor is:
+          </p> -->
+
+            </div>
+            <div class="row">
+
+            <div class="container1">
+
+              <div style="padding-top: 90px;">
+                <canvas id="ind_chart"></canvas>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="container" style="margin-top: 50px; padding-right: 100px;" >
+                <div id="Age1">
+                  <h1>Age</h1>
+                  <table style>
+                    <tr>
+                      <th>Age</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>at least 18 but less than 25 years</td>
+                      <td>25</td>
+                    </tr>
+                    <tr>
+                      <td>at least  25 but less than 33 years</td>
+                      <td>30</td>
+                    </tr>
+                    <tr>
+                      <td>at least  33 but less than 40 years</td>
+                      <td>25</td>
+                    </tr>
+                    <tr>
+                      <td>at least  40 but less than 45 years</td>
+                      <td>15</td>
+                    </tr>
+                  </table>
+
+                </div>
+
+                <div id="English1">
+
+                  <h1>English language skills</h1>
+                  <table style>
+                    <tr>
+                      <th>English</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>Competent English	</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>Proficient English</td>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <td>Superior English</td>
+                      <td>20</td>
+                    </tr>
+                  </table>
+
+
+                </div>
+
+                <div id="Skilled1">
+                  <h1>Skilled employment experience</h1><br><br>
+                  <h3>Overseas skilled employment – (outside Australia)</h3>
+                  <table>
+                    <tr>
+                      <th>Number of years	</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>Less than 3 years	</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>At least 3 but less than 5 years	</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>At least 5 but less than 8 years	</td>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <td>At least 8 years</td>
+                      <td>15</td>
+                    </tr>
+                  </table>
+                  <br>
+                  <h3>Australian skilled employment – (in Australia)</h3>
+                  <table>
+                    <tr>
+                      <th>Number of years	</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>Less than 1 year	</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>At least 1 but less than 3 years	</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>At least 3 but less than 5 years	</td>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <td>At least 5 but less than 8 years	</td>
+                      <td>15</td>
+                    </tr>
+                    <tr>
+                      <td>At least 8 years</td>
+                      <td>20</td>
+                    </tr>
+                  </table>
+
+                  <ul>
+                    <li>You can only claim points for employment if the employment was in your nominated skilled occupation or a closely related skilled occupation; and you were employed for the relevant periods set out in the table, in the 10 years before you are invited to apply. </li>
+                    <li>For any Australian employment you must have held a substantive visa or a <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/bridging-visa-a-010">Bridging A</a> or <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/bridging-visa-b-020">Bridging B</a> visa and complied with the conditions of that visa to be eligible for points.</li>
+                  </ul>
+                  <p>Employed means engaged in an occupation for remuneration for at least 20 hours a week.</p>
+                  <ul>
+                    Closely-related occupations must be:
+                    <li>in the same ANZSCO Unit Group or</li>
+                    <li>consistent with a career advancement pathway or</li>
+                    <li>recognised by an assessing authority that it is closely related to your nominated occupation, as part of your skills assessment</li>
+                  </ul>
+                  <p>Under the points test there is a cap on the number of points that can be awarded for employment experience. The maximum number of points that can be awarded is 20, this means that even if you score more than 20 combined points for your employment experience only 20 points will be awarded.</p>
+                </div>
+
+                <div id="Educational1">
+                  <h1>Educational qualifications</h1>
+                  <table>
+                    <tr>
+                      <th>Requirements</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>A Doctorate from an Australian educational institution or a Doctorate from another educational institution, that is of a <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/points-table">recognised standard</a>.	</td>
+                      <td>20</td>
+                    </tr>
+                    <tr>
+                      <td>At least a Bachelor degree from an Australian educational institution or at least a Bachelor qualification, from another educational institution, that is of a <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/points-table">recognised standard</a>.	</td>
+                      <td>15</td>
+                    </tr>
+                    <tr>
+                      <td>A diploma or trade qualification from an Australian educational institution.	</td>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <td>Attained a qualification or award recognised by the relevant assessing authority for your nominated skilled occupation as being suitable for that occupation	</td>
+                      <td>10</td>
+                    </tr>
+                    For points based migration you will receive points for your highest qualification only.
+
+                  </table>
+                  <h6>Recognition of your qualifications</h6>
+                  <p>The authority undertaking your skills assessment may determine if your qualifications are comparable to the relevant Australian qualification. Assessing authorities are listed against your occupation in the relevant list of <a href="https://immi.homeaffairs.gov.au/visas/working-in-australia/skill-occupation-list">eligible skilled occupations</a>. You must have obtained this recognition at the time you are invited to apply for a visa.</p>
+                  <p>If you hold an overseas qualification at bachelor level or above and your skills assessing authority did not offer an opinion on that qualification then it is open to you to contact Vocational Education Training and Assessment Services (VETASSESS) for advice.</p>
+                  <p>VETASSESS can provide an assessment of the comparative educational level of these qualifications against the Australian Qualifications Framework (AQF). Advice from VETASSESS should be provided with your application to support your claim for these points.</p>
+                  To obtain an assessment  contact <a href="https://www.vetassess.com.au/">Vocational Education Training and Assessment Services</a>.
+
+                  <h6>Doctoral requirements (PhD)</h6>
+                  <p>You can only be awarded points for a doctoral degree if you have completed a qualification at the relevant level, that is,  a Doctor of Philosophy (PhD). You cannot claim these points for the award of other qualifications that give you the right to use to the title of Doctor (that is, general practitioner, dentist, vet).</p>
+                </div>
+
+                <div id="Specialist1">
+
+                  <h1>Specialist education qualification</h1>
+
+                  <table>
+                    <tr>
+                      <th>Requirements</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>A Masters degree by research or a Doctorate degree from an Australian educational institution that included at least 2 <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">academic years study</a> in a relevant field.</td>
+                      <td>10</td>
+                    </tr>
+                  </table>
+                  <p>The postgraduate degree by research (doctorate or masters) must be awarded from an Australian education institution after at least two academic years of study in the following science, technology, engineering, mathematics or specified information and communication technology (ICT) fields:</p>
+                  <ul>
+                    <b>Natural and physical sciences</b>
+                    <li>biological sciences</li>
+                    <li>chemical sciences</li>
+                    <li>earth sciences</li>
+                    <li>mathematical sciences</li>
+                    <li>natural and physical sciences</li>
+                    <li>other natural and physical sciences</li>
+                    <li>physics and astronomy</li>
+
+                  </ul>
+
+                  <ul>
+                    <b>Information technology</b>
+
+                    <li>computer science</li>
+                    <li>information systems</li>
+                    <li>information technology</li>
+                    <li>other information technology</li>
+
+                  </ul>
+
+                  <ul>
+                    <b>Engineering and related technologies</b>
+
+                    <li>aerospace engineering and technology</li>
+                    <li>civil engineering</li>
+                    <li>electrical and electronic engineering and technology</li>
+                    <li>engineering and related technologies</li>
+                    <li>geomatics engineering</li>
+                    <li>manufacturing engineering and technology</li>
+                    <li>maritime engineering and technology</li>
+                    <li>mechanical and industrial engineering and technology</li>
+                    <li>other engineering and related technologies</li>
+                    <li>process and resources engineering.</li>
+
+                  </ul>
+                  To determine whether your qualification is eligible, see the <a href="http://cricos.education.gov.au/">CRICOS</a> website.
+                </div>
+
+                <div id="Australian1">
+
+                  <h1>Australian study requirement</h1>
+                  <table>
+                    <tr>
+                      <th>Requirements</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>Meet the Australian study requirement	</td>
+                      <td>5</td>
+                    </tr>
+                    <p>You must have at least 1 degree, diploma or trade qualification from an Australian educational institution that meets the <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">Australian study requirement</a>.</p>
+                  </table>
+
+                </div>
+                <div id="Professional1">
+
+                  <h1>Professional Year in Australia</h1>
+
+                  <table>
+                    <tr>
+                      <th>Requirements</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>Completion of a Professional Year in Australia	</td>
+                      <td>5</td>
+                    </tr>
+                  </table>
+
+                    <p>At the time of invitation to apply, you had completed a Professional Year. To be eligible for the award of these points your Professional Year must have been in Accounting, ICT/Computing or Engineering, and:</p>
+                    <ul>
+                      <li>in your nominated occupation or a closely related occupation</li>
+                      <li>completed over a period of at least 12 months</li>
+                      <li>completed in Australia in the four years before you are invited to apply for a visa</li>
+                      <li>provided by one of these organisations:
+                      <ul>
+                        <li>the<a href="http://www.acs.org.au/"> Australian Computer Society</a></li>
+                        <li><a href="http://www.cpaaustralia.com.au/">CPA Australia</a></li>
+                        <li><a href="https://www.charteredaccountantsanz.com/">Chartered Accountants Australia and New Zealand</a></li>
+                        <li>the<a href="http://www.publicaccountants.org.au/"> Institute of Public Accountants</a>(formerly the National Institute of Accountants)</li>
+                        <li><a href="http://www.eeaust.com.au/"></a>Engineers Australia.</li>
+                      </ul></li>
+                    </ul>
+
+                </div>
+                <div id="Credentialled1">
+
+                  <h1>Credentialled community language</h1>
+
+                  <table>
+                    <tr>
+                      <th>Requirements</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>Hold a recognised qualification in a credentialled community language	</td>
+                      <td>5</td>
+                    </tr>
+                  </table>
+                  <p>To be credentialled in a community language and eligible for the award of points you must have been accredited at the paraprofessional level or above, certified at the certified provisional level or above, or have a community language credential for interpreting or translating by the <a href="http://www.naati.com.au/">National Accreditation Authority for Translators and Interpreters</a>.</p>
+                </div>
+                <div id="Study1">
+
+                  <h1>Study in regional Australia</h1>
+
+                  <table>
+                    <tr>
+                      <th>Requirements</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>You must have at least 1 degree, diploma or trade qualification from an Australian educational institution that satisfies the <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">Australian study requirement</a> obtained while living and studying in an eligible area of regional Australia	</td>
+                      <td>5</td>
+                    </tr>
+                  </table>
+                  <p>To be eligible for the award of points your educational qualification:</p>
+                  <ul>
+                    <li>must meet the <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">Australian study requirement</a></li>
+                    <li>have been obtained while you lived in, and studied at a campus in a designated regional area</li>
+                    <li>not include study undertaken by distance education</li>
+                  </ul>
+                </div>
+                <div id="Partner1">
+
+                  <h1>Partner skills</h1>
+                  <table>
+                    <tr>
+                      <th>Requirements</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>You must have at least 1 degree, diploma or trade qualification from an Australian educational institution that satisfies the <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">Australian study requirement</a> obtained while living and studying in an eligible area of regional Australia
+                    <p>Your spouse or de facto partner must also be an applicant for this visa and meet age, English and skill criteria</p>
+                    <p>A de facto relationship is one where you and your partner are not legally married to each other but:
+
+                      <br>you are committed to a shared life excluding all others
+                      <br>your relationship is genuine and continuing
+                      <br>you live together or do not live separately and apart on a permanent basis
+                      <br>you are not related by family</p>
+                      <p>For you to be eligible for the award of these points your partner must be an applicant for the same visa subclass and must not be an Australian permanent resident or an Australian citizen.  Additionally, you will need to provide evidence that when you were invited to apply for this visa that they:</p>
+                      <ul>
+                        <li>were under 45 years old</li>
+                        <li>had competent English</li>
+                        <li>had nominated a skilled occupation that is on the same skilled occupation list as your nominated skilled occupation</li>
+                        <li>had a suitable skills assessment from the relevant assessing authority for their nominated skilled occupation, and the assessment wasn’t for a Subclass 485 visa.</li>
+
+                      </ul></td>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <td>
+                      <p>Your spouse or de facto partner must also be an applicant for this visa and has competent English</p>
+                    <p>For you to be eligible for the award of these points your partner must be an applicant for the same visa subclass and must not be an Australian permanent resident or an Australian citizen.	</p></td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>You are single or your partner is an Australian citizen or permanent resident	</td>
+                      <td>10</td>
+
+                    </tr>
+
+                  </table>
+                </div>
+
+              </div>
+            </div>
+
+              </div>
+
+              <div class="text-center">
+                <br><button onclick="showModal2()" class="express-btn1 modal-btn" type="button">Calculate your score!</button>
+              </div>
+
+              <div class="container">
+                <div class="text-center performance1">
+                <br><h1>Your Performance:</h1>
+                </div>
+                <div class="row">
+
+                <div class="container1">
+                  <div class="resultChart">
+                    <canvas id="scoreChart1"></canvas>
+                  </div>
+                </div>
+
+                  <div class="col">
+                    <div class="text-center" style="padding-top: 70px;">
+                      <br><h3 class="insert-here1-1"></h3>
+                      <h4 class="insert-here1-2"></h4>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+          </section>
+      </div>
+    </div>
+
+    <div id="eligibility">
+        <div class="container" data-aos="zoom-in">
+          <section style="background: white;">
+            <div class="container">
+              <h1>Skilled Nominated visa (subclass 190) <br> Factors for Immigration</h1>
+              <!-- <p>The minimum score required to be eligible for permanent residence in the Express Entry System
+                under the Federal skill Workers Program is <b>67 points</b> out of <b>100 points</b>.
+           <br><br>The six selection factors and the maximum points for each factor is:
+          </p> -->
+
+            </div>
+            <div class="row">
+
+            <div class="container1">
+
+              <div style="padding-top: 90px;">
+                <canvas id="nom_chart"></canvas>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="container" style="margin-top: 50px; padding-right: 100px;" >
+                <div id="Age2">
+                  <h1>Age</h1>
+                  <table style>
+                    <tr>
+                      <th>Age</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>at least 18 but less than 25 years</td>
+                      <td>25</td>
+                    </tr>
+                    <tr>
+                      <td>at least  25 but less than 33 years</td>
+                      <td>30</td>
+                    </tr>
+                    <tr>
+                      <td>at least  33 but less than 40 years</td>
+                      <td>25</td>
+                    </tr>
+                    <tr>
+                      <td>at least  40 but less than 45 years</td>
+                      <td>15</td>
+                    </tr>
+                  </table>
+
+                </div>
+
+                <div id="English2">
+
+                  <h1>English language skills</h1>
+                  <table style>
+                    <tr>
+                      <th>English</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>Competent English	</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>Proficient English</td>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <td>Superior English</td>
+                      <td>20</td>
+                    </tr>
+                  </table>
+
+
+                </div>
+
+                <div id="Skilled2">
+                  <h1>Skilled employment experience</h1><br><br>
+                  <h3>Overseas skilled employment – (outside Australia)</h3>
+                  <table>
+                    <tr>
+                      <th>Number of years	</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>Less than 3 years	</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>At least 3 but less than 5 years	</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>At least 5 but less than 8 years	</td>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <td>At least 8 years</td>
+                      <td>15</td>
+                    </tr>
+                  </table>
+                  <br>
+                  <h3>Australian skilled employment – (in Australia)</h3>
+                  <table>
+                    <tr>
+                      <th>Number of years	</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>Less than 1 year	</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>At least 1 but less than 3 years	</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>At least 3 but less than 5 years	</td>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <td>At least 5 but less than 8 years	</td>
+                      <td>15</td>
+                    </tr>
+                    <tr>
+                      <td>At least 8 years</td>
+                      <td>20</td>
+                    </tr>
+                  </table>
+
+                  <ul>
+                    <li>You can only claim points for employment if the employment was in your nominated skilled occupation or a closely related skilled occupation; and you were employed for the relevant periods set out in the table, in the 10 years before you are invited to apply. </li>
+                    <li>For any Australian employment you must have held a substantive visa or a <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/bridging-visa-a-010">Bridging A</a> or <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/bridging-visa-b-020">Bridging B</a> visa and complied with the conditions of that visa to be eligible for points.</li>
+                  </ul>
+                  <p>Employed means engaged in an occupation for remuneration for at least 20 hours a week.</p>
+                  <ul>
+                    Closely-related occupations must be:
+                    <li>in the same ANZSCO Unit Group or</li>
+                    <li>consistent with a career advancement pathway or</li>
+                    <li>recognised by an assessing authority that it is closely related to your nominated occupation, as part of your skills assessment</li>
+                  </ul>
+                  <p>Under the points test there is a cap on the number of points that can be awarded for employment experience. The maximum number of points that can be awarded is 20, this means that even if you score more than 20 combined points for your employment experience only 20 points will be awarded.</p>
+                </div>
+
+                <div id="Educational2">
+                  <h1>Educational qualifications</h1>
+                  <table>
+                    <tr>
+                      <th>Requirements</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>A Doctorate from an Australian educational institution or a Doctorate from another educational institution, that is of a <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/points-table">recognised standard</a>.	</td>
+                      <td>20</td>
+                    </tr>
+                    <tr>
+                      <td>At least a Bachelor degree from an Australian educational institution or at least a Bachelor qualification, from another educational institution, that is of a <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/points-table">recognised standard</a>.	</td>
+                      <td>15</td>
+                    </tr>
+                    <tr>
+                      <td>A diploma or trade qualification from an Australian educational institution.	</td>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <td>Attained a qualification or award recognised by the relevant assessing authority for your nominated skilled occupation as being suitable for that occupation	</td>
+                      <td>10</td>
+                    </tr>
+                    For points based migration you will receive points for your highest qualification only.
+
+                  </table>
+                  <h6>Recognition of your qualifications</h6>
+                  <p>The authority undertaking your skills assessment may determine if your qualifications are comparable to the relevant Australian qualification. Assessing authorities are listed against your occupation in the relevant list of <a href="https://immi.homeaffairs.gov.au/visas/working-in-australia/skill-occupation-list">eligible skilled occupations</a>. You must have obtained this recognition at the time you are invited to apply for a visa.</p>
+                  <p>If you hold an overseas qualification at bachelor level or above and your skills assessing authority did not offer an opinion on that qualification then it is open to you to contact Vocational Education Training and Assessment Services (VETASSESS) for advice.</p>
+                  <p>VETASSESS can provide an assessment of the comparative educational level of these qualifications against the Australian Qualifications Framework (AQF). Advice from VETASSESS should be provided with your application to support your claim for these points.</p>
+                  To obtain an assessment  contact <a href="https://www.vetassess.com.au/">Vocational Education Training and Assessment Services</a>.
+
+                  <h6>Doctoral requirements (PhD)</h6>
+                  <p>You can only be awarded points for a doctoral degree if you have completed a qualification at the relevant level, that is,  a Doctor of Philosophy (PhD). You cannot claim these points for the award of other qualifications that give you the right to use to the title of Doctor (that is, general practitioner, dentist, vet).</p>
+                </div>
+
+                <div id="Specialist2">
+
+                  <h1>Specialist education qualification</h1>
+
+                  <table>
+                    <tr>
+                      <th>Requirements</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>A Masters degree by research or a Doctorate degree from an Australian educational institution that included at least 2 <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">academic years study</a> in a relevant field.</td>
+                      <td>10</td>
+                    </tr>
+                  </table>
+                  <p>The postgraduate degree by research (doctorate or masters) must be awarded from an Australian education institution after at least two academic years of study in the following science, technology, engineering, mathematics or specified information and communication technology (ICT) fields:</p>
+                  <ul>
+                    <b>Natural and physical sciences</b>
+                    <li>biological sciences</li>
+                    <li>chemical sciences</li>
+                    <li>earth sciences</li>
+                    <li>mathematical sciences</li>
+                    <li>natural and physical sciences</li>
+                    <li>other natural and physical sciences</li>
+                    <li>physics and astronomy</li>
+
+                  </ul>
+
+                  <ul>
+                    <b>Information technology</b>
+
+                    <li>computer science</li>
+                    <li>information systems</li>
+                    <li>information technology</li>
+                    <li>other information technology</li>
+
+                  </ul>
+
+                  <ul>
+                    <b>Engineering and related technologies</b>
+
+                    <li>aerospace engineering and technology</li>
+                    <li>civil engineering</li>
+                    <li>electrical and electronic engineering and technology</li>
+                    <li>engineering and related technologies</li>
+                    <li>geomatics engineering</li>
+                    <li>manufacturing engineering and technology</li>
+                    <li>maritime engineering and technology</li>
+                    <li>mechanical and industrial engineering and technology</li>
+                    <li>other engineering and related technologies</li>
+                    <li>process and resources engineering.</li>
+
+                  </ul>
+                  To determine whether your qualification is eligible, see the <a href="http://cricos.education.gov.au/">CRICOS</a> website.
+                </div>
+
+                <div id="Australian2">
+
+                  <h1>Australian study requirement</h1>
+                  <table>
+                    <tr>
+                      <th>Requirements</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>Meet the Australian study requirement	</td>
+                      <td>5</td>
+                    </tr>
+                    <p>You must have at least 1 degree, diploma or trade qualification from an Australian educational institution that meets the <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">Australian study requirement</a>.</p>
+                  </table>
+
+                </div>
+                <div id="Professional2">
+
+                  <h1>Professional Year in Australia</h1>
+
+                  <table>
+                    <tr>
+                      <th>Requirements</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>Completion of a Professional Year in Australia	</td>
+                      <td>5</td>
+                    </tr>
+                  </table>
+
+                    <p>At the time of invitation to apply, you had completed a Professional Year. To be eligible for the award of these points your Professional Year must have been in Accounting, ICT/Computing or Engineering, and:</p>
+                    <ul>
+                      <li>in your nominated occupation or a closely related occupation</li>
+                      <li>completed over a period of at least 12 months</li>
+                      <li>completed in Australia in the four years before you are invited to apply for a visa</li>
+                      <li>provided by one of these organisations:
+                      <ul>
+                        <li>the<a href="http://www.acs.org.au/"> Australian Computer Society</a></li>
+                        <li><a href="http://www.cpaaustralia.com.au/">CPA Australia</a></li>
+                        <li><a href="https://www.charteredaccountantsanz.com/">Chartered Accountants Australia and New Zealand</a></li>
+                        <li>the<a href="http://www.publicaccountants.org.au/"> Institute of Public Accountants</a>(formerly the National Institute of Accountants)</li>
+                        <li><a href="http://www.eeaust.com.au/"></a>Engineers Australia.</li>
+                      </ul></li>
+                    </ul>
+
+                </div>
+                <div id="Credentialled2">
+
+                  <h1>Credentialled community language</h1>
+
+                  <table>
+                    <tr>
+                      <th>Requirements</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>Hold a recognised qualification in a credentialled community language	</td>
+                      <td>5</td>
+                    </tr>
+                  </table>
+                  <p>To be credentialled in a community language and eligible for the award of points you must have been accredited at the paraprofessional level or above, certified at the certified provisional level or above, or have a community language credential for interpreting or translating by the <a href="http://www.naati.com.au/">National Accreditation Authority for Translators and Interpreters</a>.</p>
+                </div>
+                <div id="Study2">
+
+                  <h1>Study in regional Australia</h1>
+
+                  <table>
+                    <tr>
+                      <th>Requirements</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>You must have at least 1 degree, diploma or trade qualification from an Australian educational institution that satisfies the <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">Australian study requirement</a> obtained while living and studying in an eligible area of regional Australia	</td>
+                      <td>5</td>
+                    </tr>
+                  </table>
+                  <p>To be eligible for the award of points your educational qualification:</p>
+                  <ul>
+                    <li>must meet the <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">Australian study requirement</a></li>
+                    <li>have been obtained while you lived in, and studied at a campus in a designated regional area</li>
+                    <li>not include study undertaken by distance education</li>
+                  </ul>
+                </div>
+                <div id="Partner2">
+
+                  <h1>Partner skills</h1>
+                  <table>
+                    <tr>
+                      <th>Requirements</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>You must have at least 1 degree, diploma or trade qualification from an Australian educational institution that satisfies the <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">Australian study requirement</a> obtained while living and studying in an eligible area of regional Australia
+                    <p>Your spouse or de facto partner must also be an applicant for this visa and meet age, English and skill criteria</p>
+                    <p>A de facto relationship is one where you and your partner are not legally married to each other but:
+
+                      <br>you are committed to a shared life excluding all others
+                      <br>your relationship is genuine and continuing
+                      <br>you live together or do not live separately and apart on a permanent basis
+                      <br>you are not related by family</p>
+                      <p>For you to be eligible for the award of these points your partner must be an applicant for the same visa subclass and must not be an Australian permanent resident or an Australian citizen.  Additionally, you will need to provide evidence that when you were invited to apply for this visa that they:</p>
+                      <ul>
+                        <li>were under 45 years old</li>
+                        <li>had competent English</li>
+                        <li>had nominated a skilled occupation that is on the same skilled occupation list as your nominated skilled occupation</li>
+                        <li>had a suitable skills assessment from the relevant assessing authority for their nominated skilled occupation, and the assessment wasn’t for a Subclass 485 visa.</li>
+
+                      </ul></td>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <td>
+                      <p>Your spouse or de facto partner must also be an applicant for this visa and has competent English</p>
+                    <p>For you to be eligible for the award of these points your partner must be an applicant for the same visa subclass and must not be an Australian permanent resident or an Australian citizen.	</p></td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>You are single or your partner is an Australian citizen or permanent resident	</td>
+                      <td>10</td>
+
+                    </tr>
+
+                  </table>
+                </div>
+                <div id="Nomination2">
+
+                  <h1>Nominations</h1>
+
+                  <table>
+                    <tr>
+                      <th>Requirements</th>
+                      <th>Points</th>
+                    </tr>
+                    <tr>
+                      <td>You were invited to apply for a Subclass 190 (Skilled — Nominated) visa and the nominating State or Territory government agency has not withdrawn the nomination	</td>
+                      <td>5</td>
+                    </tr>
+                  </table>
+                  <p>You must be nominated to be invited to apply for this visa. Provided your nomination remains in effect, you may be eligible for the award of these points. </p>
+                </div>
+
+              </div>
+            </div>
+
+              </div>
+
+              <div class="text-center">
+                <br><button onclick="showModal3()" class="express-btn2 modal-btn" type="button">Calculate your score!</button>
+              </div>
+
+              <div class="container">
+                <div class="text-center performance2">
+                <br><h1>Your Performance:</h1>
+                </div>
+                <div class="row">
+
+                <div class="container1">
+                  <div class="resultChart">
+                    <canvas id="scoreChart2"></canvas>
+                  </div>
+                </div>
+
+                  <div class="col">
+                    <div class="text-center" style="padding-top: 70px;">
+                      <br><h3 class="insert-here2-1"></h3>
+                      <h4 class="insert-here2-2"></h4>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+          </section>
+      </div>
+    </div>
+
+
+        <div id="process">
+            <div class="container" data-aos="zoom-in">
+              <section style="background: white;">
+                <div class="container">
+                  <h1>Skilled Regional (Provisional) visa (subclass 489) <br> Factors for Immigration</h1>
+                  <!-- <p>The minimum score required to be eligible for permanent residence in the Express Entry System
+                    under the Federal skill Workers Program is <b>67 points</b> out of <b>100 points</b>.
+               <br><br>The six selection factors and the maximum points for each factor is:
+              </p> -->
+
+                </div>
+                <div class="row">
+
+                <div class="container1">
+
+                  <div style="padding-top: 90px;">
+                    <canvas id="reg_chart"></canvas>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="container" style="margin-top: 50px; padding-right: 100px;" >
+                    <div id="Age3">
+                      <h1>Age</h1>
+                      <table style>
+                        <tr>
+                          <th>Age</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>at least 18 but less than 25 years</td>
+                          <td>25</td>
+                        </tr>
+                        <tr>
+                          <td>at least  25 but less than 33 years</td>
+                          <td>30</td>
+                        </tr>
+                        <tr>
+                          <td>at least  33 but less than 40 years</td>
+                          <td>25</td>
+                        </tr>
+                        <tr>
+                          <td>at least  40 but less than 45 years</td>
+                          <td>15</td>
+                        </tr>
+                      </table>
+
+                    </div>
+
+                    <div id="English3">
+
+                      <h1>English language skills</h1>
+                      <table style>
+                        <tr>
+                          <th>English</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>Competent English	</td>
+                          <td>0</td>
+                        </tr>
+                        <tr>
+                          <td>Proficient English</td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <td>Superior English</td>
+                          <td>20</td>
+                        </tr>
+                      </table>
+
+
+                    </div>
+
+                    <div id="Skilled3">
+                      <h1>Skilled employment experience</h1><br><br>
+                      <h3>Overseas skilled employment – (outside Australia)</h3>
+                      <table>
+                        <tr>
+                          <th>Number of years	</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>Less than 3 years	</td>
+                          <td>0</td>
+                        </tr>
+                        <tr>
+                          <td>At least 3 but less than 5 years	</td>
+                          <td>5</td>
+                        </tr>
+                        <tr>
+                          <td>At least 5 but less than 8 years	</td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <td>At least 8 years</td>
+                          <td>15</td>
+                        </tr>
+                      </table>
+                      <br>
+                      <h3>Australian skilled employment – (in Australia)</h3>
+                      <table>
+                        <tr>
+                          <th>Number of years	</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>Less than 1 year	</td>
+                          <td>0</td>
+                        </tr>
+                        <tr>
+                          <td>At least 1 but less than 3 years	</td>
+                          <td>5</td>
+                        </tr>
+                        <tr>
+                          <td>At least 3 but less than 5 years	</td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <td>At least 5 but less than 8 years	</td>
+                          <td>15</td>
+                        </tr>
+                        <tr>
+                          <td>At least 8 years</td>
+                          <td>20</td>
+                        </tr>
+                      </table>
+
+                      <ul>
+                        <li>You can only claim points for employment if the employment was in your nominated skilled occupation or a closely related skilled occupation; and you were employed for the relevant periods set out in the table, in the 10 years before you are invited to apply. </li>
+                        <li>For any Australian employment you must have held a substantive visa or a <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/bridging-visa-a-010">Bridging A</a> or <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/bridging-visa-b-020">Bridging B</a> visa and complied with the conditions of that visa to be eligible for points.</li>
+                      </ul>
+                      <p>Employed means engaged in an occupation for remuneration for at least 20 hours a week.</p>
+                      <ul>
+                        Closely-related occupations must be:
+                        <li>in the same ANZSCO Unit Group or</li>
+                        <li>consistent with a career advancement pathway or</li>
+                        <li>recognised by an assessing authority that it is closely related to your nominated occupation, as part of your skills assessment</li>
+                      </ul>
+                      <p>Under the points test there is a cap on the number of points that can be awarded for employment experience. The maximum number of points that can be awarded is 20, this means that even if you score more than 20 combined points for your employment experience only 20 points will be awarded.</p>
+                    </div>
+
+                    <div id="Educational3">
+                      <h1>Educational qualifications</h1>
+                      <table>
+                        <tr>
+                          <th>Requirements</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>A Doctorate from an Australian educational institution or a Doctorate from another educational institution, that is of a <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/points-table">recognised standard</a>.	</td>
+                          <td>20</td>
+                        </tr>
+                        <tr>
+                          <td>At least a Bachelor degree from an Australian educational institution or at least a Bachelor qualification, from another educational institution, that is of a <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/points-table">recognised standard</a>.	</td>
+                          <td>15</td>
+                        </tr>
+                        <tr>
+                          <td>A diploma or trade qualification from an Australian educational institution.	</td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <td>Attained a qualification or award recognised by the relevant assessing authority for your nominated skilled occupation as being suitable for that occupation	</td>
+                          <td>10</td>
+                        </tr>
+                        For points based migration you will receive points for your highest qualification only.
+
+                      </table>
+                      <h6>Recognition of your qualifications</h6>
+                      <p>The authority undertaking your skills assessment may determine if your qualifications are comparable to the relevant Australian qualification. Assessing authorities are listed against your occupation in the relevant list of <a href="https://immi.homeaffairs.gov.au/visas/working-in-australia/skill-occupation-list">eligible skilled occupations</a>. You must have obtained this recognition at the time you are invited to apply for a visa.</p>
+                      <p>If you hold an overseas qualification at bachelor level or above and your skills assessing authority did not offer an opinion on that qualification then it is open to you to contact Vocational Education Training and Assessment Services (VETASSESS) for advice.</p>
+                      <p>VETASSESS can provide an assessment of the comparative educational level of these qualifications against the Australian Qualifications Framework (AQF). Advice from VETASSESS should be provided with your application to support your claim for these points.</p>
+                      To obtain an assessment  contact <a href="https://www.vetassess.com.au/">Vocational Education Training and Assessment Services</a>.
+
+                      <h6>Doctoral requirements (PhD)</h6>
+                      <p>You can only be awarded points for a doctoral degree if you have completed a qualification at the relevant level, that is,  a Doctor of Philosophy (PhD). You cannot claim these points for the award of other qualifications that give you the right to use to the title of Doctor (that is, general practitioner, dentist, vet).</p>
+                    </div>
+
+                    <div id="Specialist3">
+
+                      <h1>Specialist education qualification</h1>
+
+                      <table>
+                        <tr>
+                          <th>Requirements</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>A Masters degree by research or a Doctorate degree from an Australian educational institution that included at least 2 <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">academic years study</a> in a relevant field.</td>
+                          <td>10</td>
+                        </tr>
+                      </table>
+                      <p>The postgraduate degree by research (doctorate or masters) must be awarded from an Australian education institution after at least two academic years of study in the following science, technology, engineering, mathematics or specified information and communication technology (ICT) fields:</p>
+                      <ul>
+                        <b>Natural and physical sciences</b>
+                        <li>biological sciences</li>
+                        <li>chemical sciences</li>
+                        <li>earth sciences</li>
+                        <li>mathematical sciences</li>
+                        <li>natural and physical sciences</li>
+                        <li>other natural and physical sciences</li>
+                        <li>physics and astronomy</li>
+
+                      </ul>
+
+                      <ul>
+                        <b>Information technology</b>
+
+                        <li>computer science</li>
+                        <li>information systems</li>
+                        <li>information technology</li>
+                        <li>other information technology</li>
+
+                      </ul>
+
+                      <ul>
+                        <b>Engineering and related technologies</b>
+
+                        <li>aerospace engineering and technology</li>
+                        <li>civil engineering</li>
+                        <li>electrical and electronic engineering and technology</li>
+                        <li>engineering and related technologies</li>
+                        <li>geomatics engineering</li>
+                        <li>manufacturing engineering and technology</li>
+                        <li>maritime engineering and technology</li>
+                        <li>mechanical and industrial engineering and technology</li>
+                        <li>other engineering and related technologies</li>
+                        <li>process and resources engineering.</li>
+
+                      </ul>
+                      To determine whether your qualification is eligible, see the <a href="http://cricos.education.gov.au/">CRICOS</a> website.
+                    </div>
+
+                    <div id="Australian3">
+
+                      <h1>Australian study requirement</h1>
+                      <table>
+                        <tr>
+                          <th>Requirements</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>Meet the Australian study requirement	</td>
+                          <td>5</td>
+                        </tr>
+                        <p>You must have at least 1 degree, diploma or trade qualification from an Australian educational institution that meets the <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">Australian study requirement</a>.</p>
+                      </table>
+
+                    </div>
+                    <div id="Professional3">
+
+                      <h1>Professional Year in Australia</h1>
+
+                      <table>
+                        <tr>
+                          <th>Requirements</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>Completion of a Professional Year in Australia	</td>
+                          <td>5</td>
+                        </tr>
+                      </table>
+
+                        <p>At the time of invitation to apply, you had completed a Professional Year. To be eligible for the award of these points your Professional Year must have been in Accounting, ICT/Computing or Engineering, and:</p>
+                        <ul>
+                          <li>in your nominated occupation or a closely related occupation</li>
+                          <li>completed over a period of at least 12 months</li>
+                          <li>completed in Australia in the four years before you are invited to apply for a visa</li>
+                          <li>provided by one of these organisations:
+                          <ul>
+                            <li>the<a href="http://www.acs.org.au/"> Australian Computer Society</a></li>
+                            <li><a href="http://www.cpaaustralia.com.au/">CPA Australia</a></li>
+                            <li><a href="https://www.charteredaccountantsanz.com/">Chartered Accountants Australia and New Zealand</a></li>
+                            <li>the<a href="http://www.publicaccountants.org.au/"> Institute of Public Accountants</a>(formerly the National Institute of Accountants)</li>
+                            <li><a href="http://www.eeaust.com.au/"></a>Engineers Australia.</li>
+                          </ul></li>
+                        </ul>
+
+                    </div>
+                    <div id="Credentialled3">
+
+                      <h1>Credentialled community language</h1>
+
+                      <table>
+                        <tr>
+                          <th>Requirements</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>Hold a recognised qualification in a credentialled community language	</td>
+                          <td>5</td>
+                        </tr>
+                      </table>
+                      <p>To be credentialled in a community language and eligible for the award of points you must have been accredited at the paraprofessional level or above, certified at the certified provisional level or above, or have a community language credential for interpreting or translating by the <a href="http://www.naati.com.au/">National Accreditation Authority for Translators and Interpreters</a>.</p>
+                    </div>
+                    <div id="Study3">
+
+                      <h1>Study in regional Australia</h1>
+
+                      <table>
+                        <tr>
+                          <th>Requirements</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>You must have at least 1 degree, diploma or trade qualification from an Australian educational institution that satisfies the <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">Australian study requirement</a> obtained while living and studying in an eligible area of regional Australia	</td>
+                          <td>5</td>
+                        </tr>
+                      </table>
+                      <p>To be eligible for the award of points your educational qualification:</p>
+                      <ul>
+                        <li>must meet the <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">Australian study requirement</a></li>
+                        <li>have been obtained while you lived in, and studied at a campus in a designated regional area</li>
+                        <li>not include study undertaken by distance education</li>
+                      </ul>
+                    </div>
+                    <div id="Partner3">
+
+                      <h1>Partner skills</h1>
+                      <table>
+                        <tr>
+                          <th>Requirements</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>You must have at least 1 degree, diploma or trade qualification from an Australian educational institution that satisfies the <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">Australian study requirement</a> obtained while living and studying in an eligible area of regional Australia
+                        <p>Your spouse or de facto partner must also be an applicant for this visa and meet age, English and skill criteria</p>
+                        <p>A de facto relationship is one where you and your partner are not legally married to each other but:
+
+                          <br>you are committed to a shared life excluding all others
+                          <br>your relationship is genuine and continuing
+                          <br>you live together or do not live separately and apart on a permanent basis
+                          <br>you are not related by family</p>
+                          <p>For you to be eligible for the award of these points your partner must be an applicant for the same visa subclass and must not be an Australian permanent resident or an Australian citizen.  Additionally, you will need to provide evidence that when you were invited to apply for this visa that they:</p>
+                          <ul>
+                            <li>were under 45 years old</li>
+                            <li>had competent English</li>
+                            <li>had nominated a skilled occupation that is on the same skilled occupation list as your nominated skilled occupation</li>
+                            <li>had a suitable skills assessment from the relevant assessing authority for their nominated skilled occupation, and the assessment wasn’t for a Subclass 485 visa.</li>
+
+                          </ul></td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <td>
+                          <p>Your spouse or de facto partner must also be an applicant for this visa and has competent English</p>
+                        <p>For you to be eligible for the award of these points your partner must be an applicant for the same visa subclass and must not be an Australian permanent resident or an Australian citizen.	</p></td>
+                          <td>5</td>
+                        </tr>
+                        <tr>
+                          <td>You are single or your partner is an Australian citizen or permanent resident	</td>
+                          <td>10</td>
+
+                        </tr>
+
+                      </table>
+                    </div>
+                    <div id="Nomination3">
+
+                      <h1>Nominations</h1>
+
+                      <table>
+                        <tr>
+                          <th>Requirements</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>You were invited to apply for a Subclass 190 (Skilled — Nominated) visa and the nominating State or Territory government agency has not withdrawn the nomination	</td>
+                          <td>5</td>
+                        </tr>
+                      </table>
+                      <p>You must be nominated to be invited to apply for this visa. Provided your nomination remains in effect, you may be eligible for the award of these points. </p>
+                    </div>
+
+                  </div>
+                </div>
+
+                  </div>
+
+                  <div class="text-center">
+                    <br><button onclick="showModal4()" class="express-btn3 modal-btn" type="button">Calculate your score!</button>
+                  </div>
+
+                  <div class="container">
+                    <div class="text-center performance3">
+                    <br><h1>Your Performance:</h1>
+                    </div>
+                    <div class="row">
+
+                    <div class="container1">
+                      <div class="resultChart">
+                        <canvas id="scoreChart3"></canvas>
+                      </div>
+                    </div>
+
+                      <div class="col">
+                        <div class="text-center" style="padding-top: 70px;">
+                          <br><h3 class="insert-here3-1"></h3>
+                          <h4 class="insert-here3-2"></h4>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+              </section>
+          </div>
+        </div>
+
+
+        <div id="last">
+            <div class="container" data-aos="zoom-in">
+              <section style="background: white;">
+                <div class="container">
+                  <h1>Skilled Regional (Provisional) visa (subclass 491) <br> Factors for Immigration</h1>
+                  <!-- <p>The minimum score required to be eligible for permanent residence in the Express Entry System
+                    under the Federal skill Workers Program is <b>67 points</b> out of <b>100 points</b>.
+               <br><br>The six selection factors and the maximum points for each factor is:
+              </p> -->
+
+                </div>
+                <div class="row">
+
+                <div class="container1">
+
+                  <div style="padding-top: 90px;">
+                    <canvas id="reg491_chart"></canvas>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="container" style="margin-top: 50px; padding-right: 100px;" >
+                    <div id="Age4">
+                      <h1>Age</h1>
+                      <table style>
+                        <tr>
+                          <th>Age</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>at least 18 but less than 25 years</td>
+                          <td>25</td>
+                        </tr>
+                        <tr>
+                          <td>at least  25 but less than 33 years</td>
+                          <td>30</td>
+                        </tr>
+                        <tr>
+                          <td>at least  33 but less than 40 years</td>
+                          <td>25</td>
+                        </tr>
+                        <tr>
+                          <td>at least  40 but less than 45 years</td>
+                          <td>15</td>
+                        </tr>
+                      </table>
+
+                    </div>
+
+                    <div id="English4">
+
+                      <h1>English language skills</h1>
+                      <table style>
+                        <tr>
+                          <th>English</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>Competent English	</td>
+                          <td>0</td>
+                        </tr>
+                        <tr>
+                          <td>Proficient English</td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <td>Superior English</td>
+                          <td>20</td>
+                        </tr>
+                      </table>
+
+
+                    </div>
+
+                    <div id="Skilled4">
+                      <h1>Skilled employment experience</h1><br><br>
+                      <h3>Overseas skilled employment – (outside Australia)</h3>
+                      <table>
+                        <tr>
+                          <th>Number of years	</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>Less than 3 years	</td>
+                          <td>0</td>
+                        </tr>
+                        <tr>
+                          <td>At least 3 but less than 5 years	</td>
+                          <td>5</td>
+                        </tr>
+                        <tr>
+                          <td>At least 5 but less than 8 years	</td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <td>At least 8 years</td>
+                          <td>15</td>
+                        </tr>
+                      </table>
+                      <br>
+                      <h3>Australian skilled employment – (in Australia)</h3>
+                      <table>
+                        <tr>
+                          <th>Number of years	</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>Less than 1 year	</td>
+                          <td>0</td>
+                        </tr>
+                        <tr>
+                          <td>At least 1 but less than 3 years	</td>
+                          <td>5</td>
+                        </tr>
+                        <tr>
+                          <td>At least 3 but less than 5 years	</td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <td>At least 5 but less than 8 years	</td>
+                          <td>15</td>
+                        </tr>
+                        <tr>
+                          <td>At least 8 years</td>
+                          <td>20</td>
+                        </tr>
+                      </table>
+
+                      <ul>
+                        <li>You can only claim points for employment if the employment was in your nominated skilled occupation or a closely related skilled occupation; and you were employed for the relevant periods set out in the table, in the 10 years before you are invited to apply. </li>
+                        <li>For any Australian employment you must have held a substantive visa or a <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/bridging-visa-a-010">Bridging A</a> or <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/bridging-visa-b-020">Bridging B</a> visa and complied with the conditions of that visa to be eligible for points.</li>
+                      </ul>
+                      <p>Employed means engaged in an occupation for remuneration for at least 20 hours a week.</p>
+                      <ul>
+                        Closely-related occupations must be:
+                        <li>in the same ANZSCO Unit Group or</li>
+                        <li>consistent with a career advancement pathway or</li>
+                        <li>recognised by an assessing authority that it is closely related to your nominated occupation, as part of your skills assessment</li>
+                      </ul>
+                      <p>Under the points test there is a cap on the number of points that can be awarded for employment experience. The maximum number of points that can be awarded is 20, this means that even if you score more than 20 combined points for your employment experience only 20 points will be awarded.</p>
+                    </div>
+
+                    <div id="Educational4">
+                      <h1>Educational qualifications</h1>
+                      <table>
+                        <tr>
+                          <th>Requirements</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>A Doctorate from an Australian educational institution or a Doctorate from another educational institution, that is of a <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/points-table">recognised standard</a>.	</td>
+                          <td>20</td>
+                        </tr>
+                        <tr>
+                          <td>At least a Bachelor degree from an Australian educational institution or at least a Bachelor qualification, from another educational institution, that is of a <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/points-table">recognised standard</a>.	</td>
+                          <td>15</td>
+                        </tr>
+                        <tr>
+                          <td>A diploma or trade qualification from an Australian educational institution.	</td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <td>Attained a qualification or award recognised by the relevant assessing authority for your nominated skilled occupation as being suitable for that occupation	</td>
+                          <td>10</td>
+                        </tr>
+                        For points based migration you will receive points for your highest qualification only.
+
+                      </table>
+                      <h6>Recognition of your qualifications</h6>
+                      <p>The authority undertaking your skills assessment may determine if your qualifications are comparable to the relevant Australian qualification. Assessing authorities are listed against your occupation in the relevant list of <a href="https://immi.homeaffairs.gov.au/visas/working-in-australia/skill-occupation-list">eligible skilled occupations</a>. You must have obtained this recognition at the time you are invited to apply for a visa.</p>
+                      <p>If you hold an overseas qualification at bachelor level or above and your skills assessing authority did not offer an opinion on that qualification then it is open to you to contact Vocational Education Training and Assessment Services (VETASSESS) for advice.</p>
+                      <p>VETASSESS can provide an assessment of the comparative educational level of these qualifications against the Australian Qualifications Framework (AQF). Advice from VETASSESS should be provided with your application to support your claim for these points.</p>
+                      To obtain an assessment  contact <a href="https://www.vetassess.com.au/">Vocational Education Training and Assessment Services</a>.
+
+                      <h6>Doctoral requirements (PhD)</h6>
+                      <p>You can only be awarded points for a doctoral degree if you have completed a qualification at the relevant level, that is,  a Doctor of Philosophy (PhD). You cannot claim these points for the award of other qualifications that give you the right to use to the title of Doctor (that is, general practitioner, dentist, vet).</p>
+                    </div>
+
+                    <div id="Specialist4">
+
+                      <h1>Specialist education qualification</h1>
+
+                      <table>
+                        <tr>
+                          <th>Requirements</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>A Masters degree by research or a Doctorate degree from an Australian educational institution that included at least 2 <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">academic years study</a> in a relevant field.</td>
+                          <td>10</td>
+                        </tr>
+                      </table>
+                      <p>The postgraduate degree by research (doctorate or masters) must be awarded from an Australian education institution after at least two academic years of study in the following science, technology, engineering, mathematics or specified information and communication technology (ICT) fields:</p>
+                      <ul>
+                        <b>Natural and physical sciences</b>
+                        <li>biological sciences</li>
+                        <li>chemical sciences</li>
+                        <li>earth sciences</li>
+                        <li>mathematical sciences</li>
+                        <li>natural and physical sciences</li>
+                        <li>other natural and physical sciences</li>
+                        <li>physics and astronomy</li>
+
+                      </ul>
+
+                      <ul>
+                        <b>Information technology</b>
+
+                        <li>computer science</li>
+                        <li>information systems</li>
+                        <li>information technology</li>
+                        <li>other information technology</li>
+
+                      </ul>
+
+                      <ul>
+                        <b>Engineering and related technologies</b>
+
+                        <li>aerospace engineering and technology</li>
+                        <li>civil engineering</li>
+                        <li>electrical and electronic engineering and technology</li>
+                        <li>engineering and related technologies</li>
+                        <li>geomatics engineering</li>
+                        <li>manufacturing engineering and technology</li>
+                        <li>maritime engineering and technology</li>
+                        <li>mechanical and industrial engineering and technology</li>
+                        <li>other engineering and related technologies</li>
+                        <li>process and resources engineering.</li>
+
+                      </ul>
+                      To determine whether your qualification is eligible, see the <a href="http://cricos.education.gov.au/">CRICOS</a> website.
+                    </div>
+
+                    <div id="Australian4">
+
+                      <h1>Australian study requirement</h1>
+                      <table>
+                        <tr>
+                          <th>Requirements</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>Meet the Australian study requirement	</td>
+                          <td>5</td>
+                        </tr>
+                        <p>You must have at least 1 degree, diploma or trade qualification from an Australian educational institution that meets the <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">Australian study requirement</a>.</p>
+                      </table>
+
+                    </div>
+                    <div id="Professional4">
+
+                      <h1>Professional Year in Australia</h1>
+
+                      <table>
+                        <tr>
+                          <th>Requirements</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>Completion of a Professional Year in Australia	</td>
+                          <td>5</td>
+                        </tr>
+                      </table>
+
+                        <p>At the time of invitation to apply, you had completed a Professional Year. To be eligible for the award of these points your Professional Year must have been in Accounting, ICT/Computing or Engineering, and:</p>
+                        <ul>
+                          <li>in your nominated occupation or a closely related occupation</li>
+                          <li>completed over a period of at least 12 months</li>
+                          <li>completed in Australia in the four years before you are invited to apply for a visa</li>
+                          <li>provided by one of these organisations:
+                          <ul>
+                            <li>the<a href="http://www.acs.org.au/"> Australian Computer Society</a></li>
+                            <li><a href="http://www.cpaaustralia.com.au/">CPA Australia</a></li>
+                            <li><a href="https://www.charteredaccountantsanz.com/">Chartered Accountants Australia and New Zealand</a></li>
+                            <li>the<a href="http://www.publicaccountants.org.au/"> Institute of Public Accountants</a>(formerly the National Institute of Accountants)</li>
+                            <li><a href="http://www.eeaust.com.au/"></a>Engineers Australia.</li>
+                          </ul></li>
+                        </ul>
+
+                    </div>
+                    <div id="Credentialled4">
+
+                      <h1>Credentialled community language</h1>
+
+                      <table>
+                        <tr>
+                          <th>Requirements</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>Hold a recognised qualification in a credentialled community language	</td>
+                          <td>5</td>
+                        </tr>
+                      </table>
+                      <p>To be credentialled in a community language and eligible for the award of points you must have been accredited at the paraprofessional level or above, certified at the certified provisional level or above, or have a community language credential for interpreting or translating by the <a href="http://www.naati.com.au/">National Accreditation Authority for Translators and Interpreters</a>.</p>
+                    </div>
+                    <div id="Study4">
+
+                      <h1>Study in regional Australia</h1>
+
+                      <table>
+                        <tr>
+                          <th>Requirements</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>You must have at least 1 degree, diploma or trade qualification from an Australian educational institution that satisfies the <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">Australian study requirement</a> obtained while living and studying in an eligible area of regional Australia	</td>
+                          <td>5</td>
+                        </tr>
+                      </table>
+                      <p>To be eligible for the award of points your educational qualification:</p>
+                      <ul>
+                        <li>must meet the <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">Australian study requirement</a></li>
+                        <li>have been obtained while you lived in, and studied at a campus in a designated regional area</li>
+                        <li>not include study undertaken by distance education</li>
+                      </ul>
+                    </div>
+                    <div id="Partner4">
+
+                      <h1>Partner skills</h1>
+                      <table>
+                        <tr>
+                          <th>Requirements</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>You must have at least 1 degree, diploma or trade qualification from an Australian educational institution that satisfies the <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/australian-study-requirement">Australian study requirement</a> obtained while living and studying in an eligible area of regional Australia
+                        <p>Your spouse or de facto partner must also be an applicant for this visa and meet age, English and skill criteria</p>
+                        <p>A de facto relationship is one where you and your partner are not legally married to each other but:
+
+                          <br>you are committed to a shared life excluding all others
+                          <br>your relationship is genuine and continuing
+                          <br>you live together or do not live separately and apart on a permanent basis
+                          <br>you are not related by family</p>
+                          <p>For you to be eligible for the award of these points your partner must be an applicant for the same visa subclass and must not be an Australian permanent resident or an Australian citizen.  Additionally, you will need to provide evidence that when you were invited to apply for this visa that they:</p>
+                          <ul>
+                            <li>were under 45 years old</li>
+                            <li>had competent English</li>
+                            <li>had nominated a skilled occupation that is on the same skilled occupation list as your nominated skilled occupation</li>
+                            <li>had a suitable skills assessment from the relevant assessing authority for their nominated skilled occupation, and the assessment wasn’t for a Subclass 485 visa.</li>
+
+                          </ul></td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <td>
+                          <p>Your spouse or de facto partner must also be an applicant for this visa and has competent English</p>
+                        <p>For you to be eligible for the award of these points your partner must be an applicant for the same visa subclass and must not be an Australian permanent resident or an Australian citizen.	</p></td>
+                          <td>5</td>
+                        </tr>
+                        <tr>
+                          <td>You are single or your partner is an Australian citizen or permanent resident	</td>
+                          <td>10</td>
+
+                        </tr>
+
+                      </table>
+                    </div>
+                    <div id="Nomination4">
+
+                      <h1>Nominations</h1>
+
+                      <table>
+                        <tr>
+                          <th>Requirements</th>
+                          <th>Points</th>
+                        </tr>
+                        <tr>
+                          <td>You were invited to apply for a Subclass 190 (Skilled — Nominated) visa and the nominating State or Territory government agency has not withdrawn the nomination	</td>
+                          <td>5</td>
+                        </tr>
+                      </table>
+                      <p>You must be nominated to be invited to apply for this visa. Provided your nomination remains in effect, you may be eligible for the award of these points. </p>
+                    </div>
+
+                  </div>
+                </div>
+
+                  </div>
+
+                  <div class="text-center">
+                    <br><button onclick="showModal5()" class="express-btn4 modal-btn" type="button">Calculate your score!</button>
+                  </div>
+
+                  <div class="container">
+                    <div class="text-center performance4">
+                    <!-- <br><h1>Your Performance:</h1> -->
+                    </div>
+                    <div class="row">
+
+                    <div class="container1">
+                      <div class="resultChart">
+                        <canvas id="scoreChart4"></canvas>
+                      </div>
+                    </div>
+
+                      <div class="col">
+                        <div class="text-center" style="padding-top: 70px;">
+                          <br><h3 class="insert-here4-1"></h3>
+                          <h4 class="insert-here4-2"></h4>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+              </section>
+          </div>
+        </div>
+
+
+
+  </section>
+
+</main>
+
+
+<!--
+ <script type="text/javascript">
+   $('#Modal1').on('shown.bs.modal', function () {
+   $('#myInput').trigger('focus')
+  })
+  </script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> -->
+
+
+
+{% endblock %}
