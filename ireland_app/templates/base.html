@@ -30,18 +30,36 @@
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
-
+  <style>
+    .EXP{
+      font-weight:600;  
+      margin-top: -50%; 
+      font-family: Oswald; 
+      font-size:50px;
+    }
+    @media (max-width: 600px){
+  .nav-quote {
+      display: none;
+  }
+  .EXP{
+    margin-top: 30px;
+    font-size: 29px;
+  }
+  }
+  </style>
 
 </head>
 
 
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top d-flex align-items-center  header ">
-  <div class="container d-flex align-items-center justify-content-between">
-    <a href="{% url 'index' %}" class="logo"><img src="{% static 'assets/img/visatoirelandlogo.jpg' %}" alt="" class="img-fluid"></a>
-    <a href="#"> <img src="{% static 'assets/img/Animated-Flag-Ireland.gif' %}" style="height:40px;margin-right:100px;"> </a>
-
-        <i  style="color:black; text-align:left;">"Through Hard Times Prosperity"<br></i>
+  <div class="container d-flex align-items-center">
+    <a href="{% url 'index' %}" class="logo"><img src="{% static 'assets/img/visatoirelandlogo.jpg' %}" alt="" class="img-fluid"  style="margin-right:50px;"></a>
+    <a href="#"> <img src="{% static 'assets/img/Animated-Flag-Ireland.gif' %}" style="height:40px;"> </a>
+    <div class="nav-quote">
+      <i style="color:black; text-align:left;">"Through Hard Times Prosperity"<br></i>
+    </div>
+      
 
 
 
@@ -90,7 +108,7 @@
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
-
+    <div style="background-color: #cc1616; margin-left: 10px;" class="drop-down1" id="google_translate_element"></div>
   </div>
 </header><!-- End Header -->
 
@@ -207,6 +225,12 @@
 
 <!-- Template Main JS File -->
 <script src="{% static 'assets/js/main.js' %}"></script>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+  }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 </body>

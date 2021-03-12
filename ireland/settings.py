@@ -30,7 +30,7 @@ SECRET_KEY = 'bmh*0yr=3lb&#j&6cxvz49862$j2-g&sv+t5kxv1qi*(nzvq48'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-if(socket.gethostname()=="DESKTOP-NPQN816"):
+if(socket.gethostname()=="DESKTOP-NPQN816" or "DESKTOP-CDJ0JAR"):
     DEBUG = True
 
 
