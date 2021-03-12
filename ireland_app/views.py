@@ -31,7 +31,9 @@ class Aboutuspage(TemplateView):
 
 class Whyuspage(TemplateView):
     template_name= "whyus.html"
-
+    
+class Comingpage(TemplateView):
+    template_name= "coming_soon.html"
 
 class Contactpage(TemplateView):
     template_name= "contactus.html"
