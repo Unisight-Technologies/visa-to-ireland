@@ -26,6 +26,9 @@ urlpatterns = [
     path('whyus/', views.Whyuspage.as_view(),name="whyus"),
     path('contactus/', views.Contactpage.as_view(),name="contactus"),
     path('coming_soon/', views.Comingpage.as_view(),name="coming_soon"),
+    path('terms/', views.Terms.as_view(),name="terms"),
+    path('disclaimer/', views.Disclaimer.as_view(),name="disclaimer"),
+    path('privacy_policy/', views.Privacypolicy.as_view(),name="privacy_policy"),
     path('blogs/', views.Blog.as_view(), name="blogs"),
     path('refresh/', views.refresh, name='refresh'),
 ]

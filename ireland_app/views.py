@@ -35,6 +35,15 @@ class Whyuspage(TemplateView):
 class Comingpage(TemplateView):
     template_name= "coming_soon.html"
 
+class Terms(TemplateView):
+    template_name= "terms.html"
+
+class Disclaimer(TemplateView):
+    template_name= "disclaimer.html"
+
+class Privacypolicy(TemplateView):
+    template_name= "privacy_policy.html"
+
 class Contactpage(TemplateView):
     template_name= "contactus.html"
     def post(self, request):
