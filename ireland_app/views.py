@@ -44,6 +44,9 @@ class Disclaimer(TemplateView):
 class Privacypolicy(TemplateView):
     template_name= "privacy_policy.html"
 
+class Givingitback(TemplateView):
+    template_name= "givingItBack.html"
+
 class Contactpage(TemplateView):
     template_name= "contactus.html"
     def post(self, request):

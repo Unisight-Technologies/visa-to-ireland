@@ -31,4 +31,5 @@ urlpatterns = [
     path('privacy_policy/', views.Privacypolicy.as_view(),name="privacy_policy"),
     path('blogs/', views.Blog.as_view(), name="blogs"),
     path('refresh/', views.refresh, name='refresh'),
+    path('givingitback/', views.Givingitback.as_view(),name="givingitback"),
 ]
