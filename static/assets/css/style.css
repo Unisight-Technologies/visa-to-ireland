@@ -77,7 +77,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-
+  padding-top: 70px;
+  padding-bottom: 40px;
   background: white;
 }
 
@@ -142,6 +143,11 @@ overflow-x: auto !important;
     padding-left: 0;
     width: 100%;
   }
+  #header {
+    padding: 15px 0px;
+  }
+  
+  
 }
 
 
@@ -2001,3 +2007,172 @@ section {
    margin: auto;
 }
 /* carousel end */
+
+.icons{
+  width: 70px;
+}
+#header .logo img {
+  padding-right: 0;
+  margin: 0;
+  max-height: 65px;
+}
+
+.goog-te-gadget-icon{
+display:none;
+}
+
+
+.wrimagecard{	
+margin-top: 0;
+margin-bottom: 1.5rem;
+text-align: left;
+position: relative;
+background: #fff;
+box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+border-radius: 4px;
+transition: all 0.3s ease;
+}
+.wrimagecard .bx{
+position: relative;
+font-size: 70px;
+}
+.wrimagecard-topimage_header{
+padding: 20px;
+}
+a.wrimagecard:hover, .wrimagecard-topimage:hover {
+box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.2);
+}
+.wrimagecard-topimage a {
+width: 100%;
+height: 100%;
+display: block;
+}
+.wrimagecard-topimage_title {
+padding: 20px 24px;
+height: 80px;
+padding-bottom: 0.75rem;
+position: relative;
+}
+.wrimagecard-topimage a {
+border-bottom: none;
+text-decoration: none;
+color: #525c65;
+transition: color 0.3s ease;
+}
+
+.aboutus{
+width: 75%;
+}
+
+/*--------------------------------------------------------------
+# Top Bar
+--------------------------------------------------------------*/
+#topbar {
+height: 40px;
+font-size: 14px;
+transition: all 0.5s;
+color: rgba(255, 255, 255, 0.6);
+}
+
+#topbar.topbar-scrolled {
+top: -40px;
+}
+
+#topbar .contact-info a {
+line-height: 1;
+color: rgba(255, 255, 255, 0.6);
+transition: 0.3s;
+}
+
+#topbar .contact-info a:hover {
+color: #fff;
+}
+
+#topbar .contact-info i {
+color: #a8aec6;
+padding-right: 4px;
+}
+
+#topbar .contact-info i.icofont-phone {
+margin-left: 15px;
+}
+
+#topbar .social-links a {
+color: rgba(255, 255, 255, 0.5);
+padding-left: 15px;
+display: inline-block;
+line-height: 1px;
+transition: 0.3s;
+}
+
+#topbar .social-links a:hover {
+color: #fff;
+}
+
+#topbar .social-links a:first-child {
+border-left: 0;
+}
+
+#topbar .contact-info a, #topbar{
+color: white;
+}
+
+#topbar{
+background: #198754;
+}
+.carousel-fade .carousel-title {
+font-weight:600;  
+  margin-top: -30%; 
+  font-family: Oswald; 
+  font-size:50px;
+}
+@media (max-width: 480px) {
+
+.carousel-fade .carousel-subtitle {
+font-size: 14px;
+margin: -50px;
+}
+.carousel-fade .carousel-indicators {
+bottom: 0;
+}
+}
+
+/* Small devices (tablets, 768px and Down) */
+@media (max-width: 768px) {
+.carousel-fade .carousel-title {
+font-size: 35px;
+margin-top: -120%; 
+}
+.carousel-fade .carousel-subtitle {
+font-size: 16px;
+}
+.carousel-fade .carousel-control {
+background: #1f76bd;
+height: 40px;
+width: 20px;
+top: 50%;
+margin-top: -20px;
+}
+.carousel-fade .carousel-control .fa {
+font-size: 1.5em;
+padding-top: 4px;
+}
+
+.col-form {
+margin-bottom: 25px;
+}
+}
+@media (max-width: 600px){
+.nav-quote {
+  display: none;
+}
+
+.icons{
+width: 50px;
+}
+#header .logo img {
+padding-right: 0;
+margin: 0;
+max-height: 45px;
+}
+}

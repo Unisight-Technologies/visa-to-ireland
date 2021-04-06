@@ -30,85 +30,21 @@
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
-  <style>
-    .EXP{
-      font-weight:600;  
-      margin-top: -50%; 
-      font-family: Oswald; 
-      font-size:50px;
-    }
-    .icons{
-      width: 70px;
-    }
-    #header .logo img {
-      padding-right: 0;
-      margin: 0;
-      max-height: 65px;
-}
-
-.goog-te-gadget-icon{
-  display:none;
-}
-
-
-.wrimagecard{	
-	margin-top: 0;
-    margin-bottom: 1.5rem;
-    text-align: left;
-    position: relative;
-    background: #fff;
-    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-.wrimagecard .bx{
-	position: relative;
-    font-size: 70px;
-}
-.wrimagecard-topimage_header{
-padding: 20px;
-}
-a.wrimagecard:hover, .wrimagecard-topimage:hover {
-    box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.2);
-}
-.wrimagecard-topimage a {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-.wrimagecard-topimage_title {
-    padding: 20px 24px;
-    height: 80px;
-    padding-bottom: 0.75rem;
-    position: relative;
-}
-.wrimagecard-topimage a {
-    border-bottom: none;
-    text-decoration: none;
-    color: #525c65;
-    transition: color 0.3s ease;
-}
-
-.aboutus{
-  width: 75%;
-}
-
-    @media (max-width: 600px){
-  .nav-quote {
-      display: none;
-  }
-  .EXP{
-    margin-top: 30px;
-    font-size: 29px;
-  }
-  .icons{
-    width: 50px;
-  }
-  }
-  </style>
 
 </head>
-
+<body>
+<div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+  <div class="container d-flex">
+    <div class="contact-info mr-auto">
+      <a href="#" class="envelope"><i class="bx bxl-envelope"></i> info@visatoireland.com </a>
+      <a href="#" class="phone"><i class="bx bxl-phone"></i></i></a> Phone no.
+    </div>
+    <div class="social-links">
+      <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bx bxl-instagram"></i></i></a>
+    </div>
+  </div>
+</div>
 
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top d-flex align-items-center header">
@@ -120,21 +56,7 @@ a.wrimagecard:hover, .wrimagecard-topimage:hover {
     <div class="nav-quote">
       <i style="color:black; text-align:left;">"Through Hard Times Prosperity"<br></i>
     </div>
-      
-<!--student visa, work visa, invester visa, business visa-->
-
-
-    <!-- <div class="logo">
-      <h1><a href="{% url 'index' %}">VisaToIreland</a></h1> -->
-        <!-- <a href="#"> <img src="{% static 'assets/img/australian-flag-animated-gif-36.gif' %}" style="height:40px"> </a> -->
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
     </div>
-
-
-
-
-
     <nav id="navbar" class="navbar">
       <ul>
         <li><a class="nav-link scrollto active" style="color:#fff; color.hover:#000;" href="{% url 'blogs' %}">Breaking News</a></li>
@@ -145,26 +67,23 @@ a.wrimagecard:hover, .wrimagecard-topimage:hover {
             <li><a href="{% url 'coming_soon' %}">Work VISA</a></li>
             <li><a href="{% url 'coming_soon' %}">Invester VISA</a></li>
             <li><a href="{% url 'coming_soon' %}">Business VISA</a></li>
-            <!-- <li><a href="#">Drop Down 4</a></li> -->
           </ul>
         </li>
-
         <li class="dropdown"><a href="#"><span>Migration Services</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
-              <li>  <a href="{% url 'coming_soon' %}">Italy</a> </li>
-              <li>  <a href="http://visatospain.pro">Spain</a> </li>
-              <li>  <a href="https://visatomalta.com/">Malta</a> </li>
-              <li>  <a href="https://visatoportugal.pro/">Portugal</a> </li>
-              <li>  <a href="{% url 'coming_soon' %}">Greece</a> </li>
-              <li>  <a href="https://visatocyprus.com/">Cyprus</a> </li>
-              <li>  <a href="https://visatonewzealand.com/">New Zealand</a> </li>
-              <li>  <a href="https://visatocanada.pro/">Canada</a> </li>
-              <li>  <a href="http://visatogermany.com/">Germany</a> </li>
-              <li>  <a href="https://www.visatoaustralia.pro/">Australia</a> </li>
-              <li>  <a href="{% url 'coming_soon' %}">Denmark</a> </li>
-              <li>  <a href="https://visatoamerica.org/">USA</a> </li>
-
-            </ul>
+            <li> <a href="http://visatoitaly.com/">Italy</a> </li>
+            <li> <a href="http://visatospain.pro">Spain</a> </li>
+            <li> <a href="https://visatomalta.com/">Malta</a> </li>
+            <li> <a href="https://visatoportugal.pro/">Portugal</a> </li>
+            <li> <a href="http://visatogreece.com/">Greece</a> </li>
+            <li> <a href="https://visatocyprus.com/">Cyprus</a> </li>
+            <li> <a href="https://visatonewzealand.com/">NewZealand</a> </li>
+            <li> <a href="https://visatocanada.pro/">Canada</a> </li>
+            <li> <a href="http://visatogermany.com/">Germany</a> </li>
+            <li> <a href="https://www.visatoaustralia.pro/">Australia</a> </li>
+            <li> <a href="http://visatodenmark.com/">Denmark</a> </li>
+            <li> <a href="https://visatoamerica.com/">USA</a> </li>
+          </ul>
         </li>
           <li><a class="nav-link scrollto" href="{% url 'aboutus' %}">About Us</a></li>
         <li><a class="nav-link scrollto" href="{% url 'contactus' %}">Contact Us</a></li>
@@ -178,25 +97,6 @@ a.wrimagecard:hover, .wrimagecard-topimage:hover {
 {% block body_block %}
 
 {% endblock %}
-
-<!-- ======= Footer ======= -->
-<!-- <footer id="footer">
-  <div class="container">
-    <h3>Visa To Ireland</h3>
-    <p>footer </p>
-    <div class="social-links">
-      <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-      <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-    </div>
-    <div class="copyright">
-      &copy; Copyright <strong><span>VisaToIreland</span></strong>. All Rights Reserved
-    </div>
-
-  </div>
-</footer> -->
-
-<!-- End Footer -->
 
 <!-- ======= Footer ======= -->
 <footer id="footer">
@@ -229,11 +129,6 @@ a.wrimagecard:hover, .wrimagecard-topimage:hover {
             <li><i class="bx bx-chevron-right"></i> <a href="{% url 'coming_soon' %}">Work VISA </a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="{% url 'coming_soon' %}">Invester VISA </a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="{% url 'coming_soon' %}">Business VISA </a></li>
-            <!-- <li><i class="bx bx-chevron-right"></i> <a href="{% url 'shortvisa' %}">Short stay visa</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'longvisa' %}">Long stay visa</a></li> -->
-            <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Self employment visa</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#"> Investing visa</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Entrepreneur visa</a></li> -->
             <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contactus' %}">Contact Us</a></li>             <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li> -->             <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
            </ul>
          </div>
@@ -241,18 +136,18 @@ a.wrimagecard:hover, .wrimagecard-topimage:hover {
          <div class="col-lg-2 col-md-6 footer-links">
            <h4>Migration Services</h4>
            <ul>
-             <li> <i class="bx bx-chevron-right"></i> <a href="{% url 'coming_soon' %}">Italy</a> </li>
+             <li> <i class="bx bx-chevron-right"></i> <a href="http://visatoitaly.com/">Italy</a> </li>
              <li> <i class="bx bx-chevron-right"></i> <a href="http://visatospain.pro">Spain</a> </li>
              <li> <i class="bx bx-chevron-right"></i> <a href="https://visatomalta.com/">Malta</a> </li>
              <li> <i class="bx bx-chevron-right"></i> <a href="https://visatoportugal.pro/">Portugal</a> </li>
-             <li> <i class="bx bx-chevron-right"></i> <a href="{% url 'coming_soon' %}">Greece</a> </li>
+             <li> <i class="bx bx-chevron-right"></i> <a href="http://visatogreece.com/">Greece</a> </li>
              <li> <i class="bx bx-chevron-right"></i> <a href="https://visatocyprus.com/">Cyprus</a> </li>
              <li> <i class="bx bx-chevron-right"></i> <a href="https://visatonewzealand.com/">NewZealand</a> </li>
              <li> <i class="bx bx-chevron-right"></i> <a href="https://visatocanada.pro/">Canada</a> </li>
              <li> <i class="bx bx-chevron-right"></i> <a href="http://visatogermany.com/">Germany</a> </li>
              <li> <i class="bx bx-chevron-right"></i> <a href="https://www.visatoaustralia.pro/">Australia</a> </li>
-             <li> <i class="bx bx-chevron-right"></i> <a href="{% url 'coming_soon' %}">Denmark</a> </li>
-             <li> <i class="bx bx-chevron-right"></i> <a href="https://visatoamerica.org/">USA</a> </li>
+             <li> <i class="bx bx-chevron-right"></i> <a href="http://visatodenmark.com/">Denmark</a> </li>
+             <li> <i class="bx bx-chevron-right"></i> <a href="https://visatoamerica.com/">USA</a> </li>
 
            </ul>
            </div>
@@ -266,17 +161,6 @@ a.wrimagecard:hover, .wrimagecard-topimage:hover {
               <li> <i class="bx bx-chevron-right"></i> <a href="{% url 'givingitback' %}">Giving it back</a> </li>
             </ul>
             </div>
-
-
-
-         <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
-           <h4>Our Newsletter</h4>
-            <form action="{% url 'coming_soon' %}" >
-             <input type="email" name="email"><input type="submit" value="Subscribe">
-           </form>
-
-         </div> -->
-
        </div>
      </div>
    </div>
@@ -288,7 +172,8 @@ a.wrimagecard:hover, .wrimagecard-topimage:hover {
      </div>
 
   </div>
- </footer><!-- End Footer -->
+ </footer>
+ <!-- End Footer -->
 
 
 
@@ -316,6 +201,39 @@ a.wrimagecard:hover, .wrimagecard-topimage:hover {
   </script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+  <script>
+    // Toggle .header-scrolled class to #header when page is scrolled
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 100) {
+    $('#header').addClass('header-scrolled');
+    $('#topbar').addClass('topbar-scrolled');
+    document.getElementById("header").style.padding = "15px 0px";
+  } 
+  else {
+    $('#header').removeClass('header-scrolled');
+    $('#topbar').removeClass('topbar-scrolled');
+    const mediaQuery = window.matchMedia('(max-width: 600px)')
+    if (mediaQuery.matches) {
+      document.getElementById("header").style.padding = "15px 0px";
+    }
+    else{
+    document.getElementById("header").style.padding = "70px 0px 40px";
+    }
+  }
+});
+
+if ($(window).scrollTop() > 100) {
+  $('#header').addClass('header-scrolled');
+  $('#topbar').addClass('topbar-scrolled');
+  if (mediaQuery.matches) {
+    document.getElementById("header").style.padding = "15px 0px";
+  }
+  else{
+  document.getElementById("header").style.padding = "70px 0px 40px";
+  }
+}
+
+  </script>
 
 </body>
 
