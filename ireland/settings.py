@@ -36,6 +36,7 @@ if(socket.gethostname()=="DESKTOP-NPQN816","Ananya-PC","DESKTOP-CDJ0JAR"):
 
 ALLOWED_HOSTS = ['visatoireland.com','www.visatoireland.com','127.0.0.1']
 
+GOOGLE_RECAPTCHA_SECRET_KEY = env('RECAPTCHA_KEY')
 
 # Application definition
 

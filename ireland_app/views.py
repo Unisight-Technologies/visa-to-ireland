@@ -6,6 +6,14 @@ from django.http import HttpResponse
 from . import mailHandler
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
+#recaptcha imports
+import json
+import urllib
+from django.conf import settings
+import environ
+env = environ.Env()
+# reading .env file
+environ.Env.read_env()
 # Create your views here.
 
 
@@ -49,28 +57,38 @@ class Givingitback(TemplateView):
 
 class Contactpage(TemplateView):
     template_name= "contactus.html"
-    def post(self, request):
+    def get(self, request, *args, **kwargs):
+        context={
+            'SITE_KEY': env('RECAPTCHA_SITE_KEY')
+        }
 
-        form = request.POST
-        name = form.get('name')
-        email = form.get('email')
-        phone = form.get('phone')
-        subject = form.get('subject')
-        message = form.get('message')
-
-        new_contact = models.Contact.objects.create(
-            name=name,
-            email=email,
-            phone=phone,
-            subject=subject,
-            message=message
-
-        )
-        new_contact.save()
-        mailHandler.sendMailToUser(name, email)
-        mailHandler.sendMailToVisaToCanada(name, email, phone, subject, message)
-        messages.success(request, "Your query has been successfully submitted. We will get back to you soon.")
-        return redirect("contactus")
+        return render(request, "contactus.html",context = context)
+    
+    def post(self, request, *args, **kwargs):
+        data = request.POST
+        ''' Begin reCAPTCHA validation '''
+        recaptcha_response = request.POST.get('g-recaptcha-response')
+        url = 'https://www.google.com/recaptcha/api/siteverify'
+        values = {
+            'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+            'response': recaptcha_response
+        }
+        data = urllib.parse.urlencode(values).encode()
+        req =  urllib.request.Request(url, data=data)
+        response = urllib.request.urlopen(req)
+        result = json.loads(response.read().decode())
+        ''' End reCAPTCHA validation '''
+        if result['success']:
+            mailHandler.sendMailToUser(request.POST.get('name'), request.POST.get('email'))
+            mailHandler.sendMailToVisaToIreland(request.POST.get('name'), request.POST.get('email'),request.POST.get('phone'),request.POST.get('subject'),request.POST.get('message'))
+            messages.success(request, 'Your message has been sent successfully!')
+            return redirect('index')
+        else:
+            messages.info(request, 'Invalid reCAPTCHA. Please try again.')
+            context={
+            'SITE_KEY': env('RECAPTCHA_SITE_KEY')
+            }
+            return render(request,"contactus.html",context = context)
 
 class Blog(View):
     def get(self, request, *args, **kwargs):
