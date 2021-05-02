@@ -34,12 +34,15 @@ class Longvisapage(TemplateView):
 class Studentvisapage(TemplateView):
     template_name= "studentvisa.html"
 
+class workvisapage(TemplateView):
+    template_name= "workvisa.html"
+
 class Aboutuspage(TemplateView):
     template_name= "aboutus.html"
 
 class Whyuspage(TemplateView):
     template_name= "whyus.html"
-    
+
 class Comingpage(TemplateView):
     template_name= "coming_soon.html"
 
@@ -63,7 +66,7 @@ class Contactpage(TemplateView):
         }
 
         return render(request, "contactus.html",context = context)
-    
+
     def post(self, request, *args, **kwargs):
         data = request.POST
         ''' Begin reCAPTCHA validation '''

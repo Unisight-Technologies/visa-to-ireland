@@ -146,8 +146,8 @@ overflow-x: auto !important;
   #header {
     padding: 15px 0px;
   }
-  
-  
+
+
 }
 
 
@@ -700,6 +700,8 @@ section {
   font-weight: 600;
   font-size: 26px;
 }
+
+
 
 .features .tab-pane ul {
   list-style: none;
@@ -1263,6 +1265,14 @@ section {
   margin-bottom: 20px;
   color: #000000;
 }
+.specials .details h4 {
+  font-size: 21px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+
 
 .specials .details p {
   color: #000000;
@@ -2022,7 +2032,7 @@ display:none;
 }
 
 
-.wrimagecard{	
+.wrimagecard{
 margin-top: 0;
 margin-bottom: 1.5rem;
 text-align: left;
@@ -2121,9 +2131,9 @@ color: white;
 background: #198754;
 }
 .carousel-fade .carousel-title {
-font-weight:600;  
-  margin-top: -30%; 
-  font-family: Oswald; 
+font-weight:600;
+  margin-top: -30%;
+  font-family: Oswald;
   font-size:50px;
 }
 @media (max-width: 480px) {
@@ -2141,7 +2151,7 @@ bottom: 0;
 @media (max-width: 768px) {
 .carousel-fade .carousel-title {
 font-size: 35px;
-margin-top: -120%; 
+margin-top: -120%;
 }
 .carousel-fade .carousel-subtitle {
 font-size: 16px;

@@ -70,7 +70,7 @@
         <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="{% url 'studentvisa' %}">Student VISA</a></li>
-            <li><a href="{% url 'coming_soon' %}">Work VISA</a></li>
+            <li><a href="{% url 'workvisa' %}">Work VISA</a></li>
             <li><a href="{% url 'coming_soon' %}">Invester VISA</a></li>
             <li><a href="{% url 'coming_soon' %}">Business VISA</a></li>
           </ul>
@@ -132,7 +132,7 @@
             <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}">Home</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="{% url 'aboutus' %}">About Us</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="{% url 'studentvisa' %}">Student VISA </a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'coming_soon' %}">Work VISA </a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'workvisa' %}">Work VISA </a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="{% url 'coming_soon' %}">Invester VISA </a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="{% url 'coming_soon' %}">Business VISA </a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contactus' %}">Contact Us</a></li>             <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li> -->             <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
@@ -214,7 +214,7 @@ $(window).scroll(function() {
     $('#header').addClass('header-scrolled');
     $('#topbar').addClass('topbar-scrolled');
     document.getElementById("header").style.padding = "15px 0px";
-  } 
+  }
   else {
     $('#header').removeClass('header-scrolled');
     $('#topbar').removeClass('topbar-scrolled');
