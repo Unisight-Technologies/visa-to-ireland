@@ -23,6 +23,7 @@ urlpatterns = [
     path('longvisa/', views.Longvisapage.as_view(),name="longvisa"),
     path('studentvisa/', views.Studentvisapage.as_view(),name="studentvisa"),
     path('workvisa/', views.workvisapage.as_view(),name="workvisa"),
+    path('investorvisa/', views.Investorvisapage.as_view(),name="investorvisa"),
     path('aboutus/', views.Aboutuspage.as_view(),name="aboutus"),
     path('whyus/', views.Whyuspage.as_view(),name="whyus"),
     path('contactus/', views.Contactpage.as_view(),name="contactus"),

@@ -37,6 +37,9 @@ class Studentvisapage(TemplateView):
 class workvisapage(TemplateView):
     template_name= "workvisa.html"
 
+class Investorvisapage(TemplateView):
+    template_name= "investorvisa.html"
+
 class Aboutuspage(TemplateView):
     template_name= "aboutus.html"
 
